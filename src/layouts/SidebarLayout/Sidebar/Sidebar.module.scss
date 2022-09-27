@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #212529;
+}
+
+.aside {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.asideBox {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.asideBrand {
+    display: flex;
+    width: 100%;
+    padding: 0 25px;
+    justify-content: space-between;
+}
+.asideImageLogo {
+    width: 138px;
+}
+.asideToolSidebar {
+    color: var(--primary);
+}
+.ToolSidebar {
+    display: flex;
+    align-items: center;
+}
+// Nút Button
+.asideToggle {
+    border: 0;
+    background: 0;
+    color: #646c9a;
+    & {
+        cursor: pointer;
+    }
+}
+//
+.nav {
+    width: 100%;
+    .navBar {
+        margin: 10px 0;
+    }
+}
+.navBarMenu {
+    margin: 0;
+    list-style: none;
+    padding: 15px 0;
+}
+.navBarMenuLink {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    &:hover {
+        background-color: var(--background-color);
+
+        .navBarLinkText {
+            color: var(--primary);
+        }
+        box-icon {
+            color: var(--primary);
+        }
+    }
+}
+// .navBarMenuItem:hover .subMenu {
+//     display: block;
+// }
+
+.navBarLinkIcon {
+    display: flex;
+    text-align: center;
+    flex: 0 0 40px;
+}
+.navBarLinkText {
+    flex-grow: 1;
+}
+.navBarMenuItem {
+    list-style: none;
+}
+//
+.subMenu {
+    animation: identifier 2s linear;
+    @keyframes identifier {
+        from {
+            opacity: 0.5;
+            position: absolute;
+            top: -100;
+        }
+        to {
+            opacity: 1;
+            top: 0;
+        }
+    }
+}
+
+.subMenuBox {
+    width: 100%;
+}
+
+.subMenuLink {
+    display: flex;
+    padding: 10px 25px;
+    padding-left: 60px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    &:hover {
+        background-color: var(--background-color);
+    }
+}
