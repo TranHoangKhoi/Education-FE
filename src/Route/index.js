@@ -1,4 +1,4 @@
-import { SidebarLayout } from '~/layouts';
+import { DashboardLayout } from '~/layouts';
 import Home from '~/pages/Home';
 import Following from '~/pages/Following';
 import Student from '~/pages/Student';
@@ -6,9 +6,9 @@ import Student from '~/pages/Student';
 const publicRoute = [];
 // phai dang nhap
 const privateRoute = [
-    { path: '/', component: Home },
+    { path: '/', component: Home, layout: DashboardLayout },
     { path: '/following', component: Following },
-    { path: '/student', component: Student, layout: SidebarLayout },
+    { path: '/student', component: Student },
 ];
 
 export { publicRoute, privateRoute };

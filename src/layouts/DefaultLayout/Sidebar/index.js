@@ -2,6 +2,7 @@ import style from './Sidebar.module.scss';
 import 'boxicons';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 function Sidebar() {
     const [active, SetActive] = useState(false);
     const handleAdd = () => {

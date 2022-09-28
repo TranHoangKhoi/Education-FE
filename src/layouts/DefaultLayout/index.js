@@ -1,10 +1,9 @@
-import Header from '~/layouts/DefaultLayout/Header';
-// import style from './DefaultLayout.module.scss';
+import Sidebar from '~/layouts/DefaultLayout/Sidebar';
 
 function DefaultLayout({ children }) {
     return (
         <div>
-            <Header />
+            <Sidebar />
             {children}
         </div>
     );
