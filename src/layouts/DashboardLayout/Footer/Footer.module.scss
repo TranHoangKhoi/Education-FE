@@ -1,0 +1,14 @@
+.wrapper {
+    --footer-dashboard-background-color: #192041;
+    border-top: 10px solid var(--primary-color);
+    min-height: 300px;
+    background-color: var(--footer-dashboard-background-color);
+}
+
+.footer {
+    margin: 10px 0;
+}
+
+.footer__logo--img {
+    height: 70px;
+}

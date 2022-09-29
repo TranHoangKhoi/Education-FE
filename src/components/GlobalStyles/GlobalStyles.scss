@@ -5,19 +5,51 @@
     --primary: #5d78ff;
     --primary-color: #c4cff9;
     --background-color: #c4cff9;
+    --text-color: #333;
+
+    // Dashboard Layout
+    --dashboard-layout-height-header: 70px;
 }
+
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
+
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.6rem;
+    line-height: 1.5rem;
     color: #212529;
+    text-rendering: optimizespeed;
 }
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+button,
+input,
+[tabindex] {
+    border: none;
+    outline: none;
+}
+
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
 .App {
     color: var(--primary);
 }
+
 .aside_wrap {
     width: 20%;
 }

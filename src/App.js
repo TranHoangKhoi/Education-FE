@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { privateRoute } from '~/Route';
-import { DefaultLayout, DashboardLayout } from '~/layouts';
+import { DefaultLayout } from '~/layouts';
 
 function App() {
     return (
