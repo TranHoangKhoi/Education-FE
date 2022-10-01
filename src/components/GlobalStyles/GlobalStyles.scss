@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&display=swap');
 
 :root {
-    --primary: #5d78ff;
-    --primary-color: #c4cff9;
+    --primary-color: #5d78ff;
     --background-color: #c4cff9;
-    --text-color: #333;
+    --black-color: #333;
+    --hover-menu-aside: #f6f7fd;
+    --color-icon-aside: #c4cff9;
+    --background-header-sidebar: #fff;
 
     // Dashboard Layout
     --dashboard-layout-height-header: 70px;
@@ -23,7 +25,7 @@ html {
 
 body {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1rem;
     line-height: 1.5rem;
     color: #212529;
     text-rendering: optimizespeed;
@@ -48,8 +50,4 @@ a[href] {
 
 .App {
     color: var(--primary);
-}
-
-.aside_wrap {
-    width: 20%;
 }
