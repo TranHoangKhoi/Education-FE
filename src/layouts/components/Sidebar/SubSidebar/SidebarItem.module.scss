@@ -1,0 +1,71 @@
+// sidebarItem
+
+.sidebar-item {
+    display: grid;
+    flex-direction: column;
+    font-size: 2rem;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 15s;
+    &:hover {
+        background-color: var(--hover-menu-aside);
+    }
+    .sidebar-title {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        &:hover {
+            background-color: var(--hover-menu-aside);
+            color: var(--primary-color);
+        }
+    }
+}
+
+.sidebar-item .span .icon_sidebar--item {
+    flex: 0 0 30px;
+    width: 100%;
+    svg {
+        font-size: 1.5rem;
+        color: var(--color-icon-aside);
+    }
+}
+.span {
+    display: flex;
+    width: 100%;
+    font-size: 1.34rem;
+}
+.span-title {
+    display: flex;
+}
+.sidebar-item .toggle-btn {
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-size: 0.5em;
+}
+.sidebar-title {
+    padding: 9px 30px;
+    min-height: 44px;
+    font-size: 1.4rem;
+    align-items: center;
+}
+.sidebar-item.open .sidebar-title .toggle-btn {
+    transform: rotate(90deg) !important;
+    font-size: 0.5em;
+}
+.sidebar-item.open:not(:placeholder-shown) .sidebar-title {
+    background-color: var(--hover-menu-aside) !important;
+}
+.sidebar-content {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s linear;
+}
+
+.sidebar-item.open .sidebar-content {
+    height: auto;
+    background-color: transparent;
+    &:hover {
+        background-color: var(--hover-menu-aside);
+    }
+}

@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 400;
     line-height: 1.5rem;
 }
@@ -11,7 +11,7 @@
 }
 .aside {
     position: fixed;
-    width: 256px;
+    width: 265px;
     top: 0;
     left: 0;
     display: flex;
@@ -66,9 +66,6 @@
     width: 100%;
     display: grid;
 }
-.navBar__Link--Icon {
-}
-
 .navBar__Link--Text {
     width: 100%;
     display: flex;
@@ -81,7 +78,7 @@
     min-height: 44px;
     .navBar__Link--Icon {
         color: var(--color-icon-aside);
-        flex: 0 0 33px;
+        flex: 0 0 30px;
     }
     &:hover {
         background-color: var(--hover-menu-aside);
@@ -95,15 +92,14 @@
         .navBar__Link--actions {
             color: var(--primary-color);
         }
+        &:active {
+            background-color: var(--hover-menu-aside);
+            color: var(--primary-color);
+        }
     }
 }
 .navBar__Link--actions {
     font-size: 0.7rem !important;
-}
-.navBar__Menu--Link .active {
-    background-color: var(--primary-color);
-    color: var(--primary-color);
-    padding: 1rem;
 }
 
 // header
@@ -114,9 +110,9 @@
     background: var(--background-header-sidebar);
     top: 0;
     right: 0;
-    left: 257px;
+    left: 265px;
     z-index: 97;
-    width: calc(100% - 257px);
+    width: calc(100% - 265px);
     border-bottom: var(--border);
 }
 #nav_toggle {
@@ -172,7 +168,7 @@
 //
 .main {
     margin-top: 90px;
-    padding-left: 255px;
+    padding-left: 265px;
     min-height: calc(100vh - 90px);
 }
 .content {
