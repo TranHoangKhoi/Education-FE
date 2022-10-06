@@ -26,7 +26,7 @@ function Sidebar() {
                 },
                 {
                     title: 'Lịch sử học',
-                    to: '/GradeBookByTerm',
+                    to: '/history',
                 },
                 {
                     title: 'Bảng điểm',
