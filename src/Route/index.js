@@ -3,7 +3,7 @@ import Home from '~/pages/Home';
 import Notification from '~/pages/Notification';
 import HistoryStudent from '~/pages/HistoryStudent';
 import Transcript from '~/pages/Transcript';
-
+import GradeBookByTerm from '~/pages/GradeBookByTerm';
 // 0 dang nhap
 const publicRoute = [];
 // phai dang nhap
@@ -12,6 +12,8 @@ const privateRoute = [
     { path: '/student', component: Notification },
     { path: '/history', component: HistoryStudent },
     { path: '/transcript', component: Transcript },
+    { path: '/gradeBookByTerm', component: GradeBookByTerm },
+
 ];
 
 export { publicRoute, privateRoute };
