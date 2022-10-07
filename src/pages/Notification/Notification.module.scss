@@ -2,7 +2,7 @@
     --size--notifications: 1.5rem;
     --color--notifications: #fff;
     --padding--notifications: 0 25px;
-    --padding--notifications--full: 16px;
+    --padding--notifications--full: 1.1rem;
     --font-weight: 700;
     --height--notifications: 60vh;
     --box-shadow: 0 0 28px 0 rgb(82 63 105 / 8%);
@@ -15,26 +15,27 @@
     position: relative;
     display: inline-block;
     color: #505ae2;
-    font-size: var(--size--notifications);
     font-weight: var(--font-weight);
+    font-size: 2.4rem;
 }
 .Link {
     color: red !important;
     font-size: var(--size--notifications);
-    font-weight: var(--font-weight);
+    font-weight: bold;
 }
 .newsletter-student {
     padding: var(--padding--notifications--full);
     max-height: var(--height--notifications);
-    overflow: auto;
+    // overflow: auto;
     &::-webkit-scrollbar {
         overflow-x: hidden;
         -ms-overflow-style: none; /* khai báo sử dụng Internet Explorer, Edge */
         scrollbar-width: none;
     }
 }
+
 .witget1__item {
-    padding: 1.1rem 0;
+    padding: 1.7rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
