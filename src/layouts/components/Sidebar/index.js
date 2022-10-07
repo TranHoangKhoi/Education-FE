@@ -13,11 +13,14 @@ function Sidebar() {
             title: 'Thông báo và tin tức',
             to: '/student',
         },
-
+        {
+            icon: <FontAwesomeIcon icon={faBell} />,
+            title: 'Điểm danh',
+            to: '/student/attendance',
+        },
         {
             icon: <FontAwesomeIcon icon={faBell} />,
             title: 'Điểm',
-            to: '/student',
             actions: faChevronRight,
             childrens: [
                 {
@@ -26,11 +29,11 @@ function Sidebar() {
                 },
                 {
                     title: 'Lịch sử học',
-                    to: '/history',
+                    to: 'historyStudent',
                 },
                 {
                     title: 'Bảng điểm',
-                    to: '/transcript',
+                    to: 'transcript',
                 },
             ],
         },
@@ -55,7 +58,7 @@ function Sidebar() {
                 <div className={cx('navBar')}>
                     <div className={cx('navBarMenu')}>
                         {menuItems.map((item, index) => (
-                            <Link to={`/slug/${item.title}`}>
+                            <Link key={index} to={item.title}>
                                 <SidebarItem key={index} path={item.to} item={item} />
                             </Link>
                         ))}

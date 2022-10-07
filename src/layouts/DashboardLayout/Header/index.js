@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import style from './Header.module.scss';
 
@@ -8,22 +9,22 @@ function Header() {
         <div className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <a className={cx('logo__link')}>
+                    <Link className={cx('logo__link')}>
                         <img className={cx('logo__img')} src="https://ap.poly.edu.vn/images/logo.png" alt="Logo" />
-                    </a>
+                    </Link>
                 </div>
 
                 <div className={cx('navbar')}>
                     <ul className={cx('navbar__list')}>
                         <li className={cx('navbar__item')}>
-                            <a href="#" className={cx('navbar__link')}>
+                            <Link to="/student" className={cx('navbar__link')}>
                                 Sinh viên
-                            </a>
+                            </Link>
                         </li>
                         <li className={cx('navbar__item')}>
-                            <a href="#" className={cx('navbar__link')}>
+                            <Link to="#" className={cx('navbar__link')}>
                                 Giảng viên
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
