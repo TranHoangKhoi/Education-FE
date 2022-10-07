@@ -25,7 +25,7 @@ function Sidebar() {
             childrens: [
                 {
                     title: 'Thay đổi lịch học',
-                    to: '/GradeBookByTerm',
+                    to: 'gradebookbyterm',
                 },
                 {
                     title: 'Lịch sử học',

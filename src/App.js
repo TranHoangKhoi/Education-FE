@@ -2,9 +2,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { DashboardLayout, DefaultLayout } from '~/layouts';
 import Notification from './pages/Notification';
+import Attendance from './pages/Attendance';
 import HistoryStudent from './pages/HistoryStudent';
 import Transcript from './pages/Transcript';
-import Attendance from './pages/Attendance';
+import GradeBookByTerm from './pages/GradeBookByTerm';
 // import Student from './pages/Student';
 function App() {
     return (
@@ -38,6 +39,7 @@ function App() {
                     <Route path="attendance" element={<Attendance />} />
                     <Route path="historyStudent" element={<HistoryStudent />} />
                     <Route path="transcript" element={<Transcript />} />
+                    <Route path="gradebookbyterm" element={<GradeBookByTerm />} />
                 </Route>
             </Routes>
         </Router>
