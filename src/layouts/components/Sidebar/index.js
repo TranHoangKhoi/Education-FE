@@ -36,8 +36,12 @@ function Sidebar()
                     to: 'transcript',
                 },
                 {
-                    title: 'giảng viên',
+                    title: 'Giảng viên',
                     to: 'lecturers',
+                },
+                {
+                    title: 'Xem điểm Giảng viên',
+                    to: 'viewscoreboard',
                 },
             ],
         },

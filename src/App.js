@@ -7,6 +7,7 @@ import HistoryStudent from './pages/HistoryStudent';
 import Transcript from './pages/Transcript';
 import GradeBookByTerm from './pages/GradeBookByTerm';
 import Lecturers from './pages/Lecturers';
+import ViewScoreboard from './pages/ViewScoreboard';
 // import Student from './pages/Student';
 function App()
 {
@@ -43,6 +44,7 @@ function App()
                     <Route path="transcript" element={<Transcript />} />
                     <Route path="gradebookbyterm" element={<GradeBookByTerm />} />
                     <Route path="lecturers" element={<Lecturers />} />
+                    <Route path="viewscoreboard" element={<ViewScoreboard />} />
                 </Route>
             </Routes>
         </Router>

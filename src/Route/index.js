@@ -5,6 +5,7 @@ import HistoryStudent from '~/pages/HistoryStudent';
 import Transcript from '~/pages/Transcript';
 import GradeBookByTerm from '~/pages/GradeBookByTerm';
 import Lecturers from '~/pages/Lecturers';
+
 // 0 dang nhap
 const publicRoute = [];
 // phai dang nhap

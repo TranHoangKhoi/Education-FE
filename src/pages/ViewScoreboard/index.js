@@ -1,10 +1,10 @@
 import classNames from 'classnames/bind';
-import styles from './Lecturers.module.scss';
+import styles from './ViewScoreboard.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpZA, faArrowDownZA, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
-function Lecturers()
+function ViewScoreboard()
 {
     return (
         <div className={cx('content')}>
@@ -422,11 +422,11 @@ function Lecturers()
                     </div>
                 </div>
                 <div className={cx('lecturers_btn_add')}>
-                    <button type="">Thêm</button>
+                    <button type="">Chỉnh sửa</button>
                 </div>
             </div >
         </div >
     );
 }
 
-export default Lecturers;
+export default ViewScoreboard;
