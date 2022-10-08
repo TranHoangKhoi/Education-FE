@@ -5,7 +5,8 @@ import SidebarItem from './SubSidebar/SidebarItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesLeft, faBell, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 const cx = classNames.bind(styles);
-function Sidebar() {
+function Sidebar()
+{
     const menuItems = [
         {
             icon: <FontAwesomeIcon icon={faBell} />,
@@ -33,6 +34,10 @@ function Sidebar() {
                 {
                     title: 'Bảng điểm',
                     to: 'transcript',
+                },
+                {
+                    title: 'giảng viên',
+                    to: 'lecturers',
                 },
             ],
         },

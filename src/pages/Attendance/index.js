@@ -1,4 +1,5 @@
-function Attendance() {
+function Attendance()
+{
     return <div>Điểm danh nè</div>;
 }
 
