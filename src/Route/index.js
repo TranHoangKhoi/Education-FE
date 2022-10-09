@@ -4,7 +4,7 @@ import Notification from '~/pages/Notification';
 import HistoryStudent from '~/pages/HistoryStudent';
 import Transcript from '~/pages/Transcript';
 import GradeBookByTerm from '~/pages/GradeBookByTerm';
-import Lecturers from '~/pages/Lecturers';
+import Scoreup from '~/pages/Scoreup';
 
 // 0 dang nhap
 const publicRoute = [];
@@ -15,8 +15,7 @@ const privateRoute = [
     { path: '/history', component: HistoryStudent },
     { path: '/transcript', component: Transcript },
     { path: '/gradeBookByTerm', component: GradeBookByTerm },
-    { path: '/lecturers', component: Lecturers },
-
+    { path: '/Scoreup', component: Scoreup },
 ];
 
 export { publicRoute, privateRoute };

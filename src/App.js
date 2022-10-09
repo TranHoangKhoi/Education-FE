@@ -6,11 +6,11 @@ import Attendance from './pages/Attendance';
 import HistoryStudent from './pages/HistoryStudent';
 import Transcript from './pages/Transcript';
 import GradeBookByTerm from './pages/GradeBookByTerm';
-import Lecturers from './pages/Lecturers';
 import ViewScoreboard from './pages/ViewScoreboard';
+import Lecturers from './layouts/Lecturers';
+import Scoreup from './pages/Scoreup';
 // import Student from './pages/Student';
-function App()
-{
+function App() {
     return (
         <Router>
             <Routes>
@@ -43,7 +43,11 @@ function App()
                     <Route path="historyStudent" element={<HistoryStudent />} />
                     <Route path="transcript" element={<Transcript />} />
                     <Route path="gradebookbyterm" element={<GradeBookByTerm />} />
-                    <Route path="lecturers" element={<Lecturers />} />
+                    <Route path="viewscoreboard" element={<ViewScoreboard />} />
+                </Route>
+
+                <Route path="/lecturers" element={<Lecturers />}>
+                    <Route path="scoreup" element={<Scoreup />} />
                     <Route path="viewscoreboard" element={<ViewScoreboard />} />
                 </Route>
             </Routes>

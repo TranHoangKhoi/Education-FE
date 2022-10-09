@@ -1,10 +1,10 @@
 :root {
-    --padding-lecturers: 20px;
+    --padding-Scoreup: 20px;
     --border-radius-btn: 4px;
 }
 
 .wrapper {
-    .lecturers_btn_add {
+    .Scoreup_btn_add {
         display: flex;
         justify-content: flex-end;
 
@@ -22,14 +22,14 @@
     }
 }
 
-.lecturers-shadow {
+.Scoreup-shadow {
     box-shadow: var(--box-shadow);
     margin-bottom: 20px;
     display: flex;
     align-items: center;
 
-    .lecturers-semester {
-        padding: var(--padding-lecturers);
+    .Scoreup-semester {
+        padding: var(--padding-Scoreup);
 
         .search-student {
             display: flex;
@@ -85,22 +85,22 @@
     }
 }
 
-.lecturers__name-table {
+.Scoreup__name-table {
     margin: 0 -12px;
     margin-bottom: 20px;
     box-shadow: var(--box-shadow);
     padding-bottom: 24px;
-    .lecturers__name {
-        padding: var(--padding-lecturers);
+    .Scoreup__name {
+        padding: var(--padding-Scoreup);
         border-bottom: 1px solid #ebedf2;
         p {
             font-size: 1.8rem;
         }
     }
-    .lecturers__btn {
+    .Scoreup__btn {
         display: flex;
         justify-content: flex-end;
-        padding: var(--padding-lecturers);
+        padding: var(--padding-Scoreup);
 
         button {
             padding: 8px;
@@ -125,7 +125,7 @@
             }
         }
     }
-    .table__lecturers {
+    .table__Scoreup {
         padding: 0 20px;
         .table__content {
             padding: 4px 0;
@@ -186,7 +186,7 @@
             }
         }
         .table__control--right {
-            .tbl__ctrl--lecturers {
+            .tbl__ctrl--Scoreup {
             }
 
             .tbl__ctrl--list {

@@ -22,7 +22,7 @@ function Header() {
                             </Link>
                         </li>
                         <li className={cx('navbar__item')}>
-                            <Link to="/giangvien" className={cx('navbar__link')}>
+                            <Link to="/lecturers" className={cx('navbar__link')}>
                                 Giảng viên
                             </Link>
                         </li>

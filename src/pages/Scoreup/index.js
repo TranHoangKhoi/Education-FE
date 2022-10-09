@@ -1,19 +1,18 @@
 import classNames from 'classnames/bind';
-import styles from './Lecturers.module.scss';
+import styles from './Scoreup.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpZA, faArrowDownZA, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
-function Lecturers()
-{
+function Scoreup() {
     return (
         <div className={cx('content')}>
             <div className={cx('wrapper')}>
-                <div className={cx('lecturers-shadow', 'row')}>
-                    <div className={cx('lecturers-semester', 'c-6')}>
+                <div className={cx('Scoreup-shadow', 'row')}>
+                    <div className={cx('Scoreup-semester', 'c-6')}>
                         <form className={cx('form-group')}>
                             <div>
-                                <label for="">Khóa học</label>
+                                <label for="">Khóa học New</label>
                             </div>
                             <div>
                                 <select name="" id="" disabled>
@@ -28,7 +27,7 @@ function Lecturers()
                         </form>
                     </div>
 
-                    <div className={cx('lecturers-semester', 'c-6')}>
+                    <div className={cx('Scoreup-semester', 'c-6')}>
                         <form className={cx('form-group')}>
                             <div>
                                 <label for="">Học kỳ</label>
@@ -47,9 +46,8 @@ function Lecturers()
                     </div>
                 </div>
 
-
-                <div className={cx('lecturers-shadow', 'row')}>
-                    <div className={cx('lecturers-semester', 'c-6')}>
+                <div className={cx('Scoreup-shadow', 'row')}>
+                    <div className={cx('Scoreup-semester', 'c-6')}>
                         <form className={cx('form-group')}>
                             <div>
                                 <label for="">Lớp</label>
@@ -57,7 +55,6 @@ function Lecturers()
                             <div>
                                 <select name="" id="">
                                     <option value="">WE16301</option>
-
                                 </select>
                             </div>
                             <div>
@@ -66,7 +63,7 @@ function Lecturers()
                         </form>
                     </div>
 
-                    <div className={cx('lecturers-semester', 'c-6')}>
+                    <div className={cx('Scoreup-semester', 'c-6')}>
                         <form className={cx('form-group')}>
                             <div>
                                 <label for="">Môn học</label>
@@ -85,33 +82,34 @@ function Lecturers()
                     </div>
                 </div>
 
-                <div className={cx('lecturers-shadow', 'center', 'row')}>
-                    <div className={cx('lecturers-semester', 'c-6')}>
+                <div className={cx('Scoreup-shadow', 'center', 'row')}>
+                    <div className={cx('Scoreup-semester', 'c-6')}>
                         <p>Danh sách lớp 16301</p>
                     </div>
 
-                    <div className={cx('lecturers-semester', 'c-6')}>
+                    <div className={cx('Scoreup-semester', 'c-6')}>
                         <form className={cx('form-group')}>
                             <div className={cx('search-student')}>
-                                <div>  <input placeholder='VD: PC02104' /></div>
-                                <div className={cx('search__btn')}>
-                                    <button type=""><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+                                <div>
+                                    {' '}
+                                    <input placeholder="VD: PC02104" />
                                 </div>
-
+                                <div className={cx('search__btn')}>
+                                    <button type="">
+                                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                                    </button>
+                                </div>
                             </div>
-
-
                         </form>
                     </div>
                 </div>
 
-
-                <div className={cx('lecturers__name-table')}>
-                    <div className={cx('lecturers__name')}>
+                <div className={cx('Scoreup__name-table')}>
+                    <div className={cx('Scoreup__name')}>
                         <p>Dương Thành Đạt</p>
                     </div>
 
-                    <div className={cx('lecturers__btn')}>
+                    <div className={cx('Scoreup__btn')}>
                         <button>Print</button>
                         <button>Copy</button>
                         <button>Excel</button>
@@ -119,7 +117,7 @@ function Lecturers()
                         <button>PDF</button>
                     </div>
 
-                    <div className={cx('table__lecturers')}>
+                    <div className={cx('table__Scoreup')}>
                         <div className={cx('table__content')}>
                             <table>
                                 <thead>
@@ -260,16 +258,15 @@ function Lecturers()
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
-                <div className={cx('lecturers__name-table')}>
-                    <div className={cx('lecturers__name')}>
+                <div className={cx('Scoreup__name-table')}>
+                    <div className={cx('Scoreup__name')}>
                         <p>1: Dương Thành Đạt</p>
                     </div>
 
-                    <div className={cx('lecturers__btn')}>
+                    <div className={cx('Scoreup__btn')}>
                         <button>Print</button>
                         <button>Copy</button>
                         <button>Excel</button>
@@ -277,7 +274,7 @@ function Lecturers()
                         <button>PDF</button>
                     </div>
 
-                    <div className={cx('table__lecturers')}>
+                    <div className={cx('table__Scoreup')}>
                         <div className={cx('table__content')}>
                             <table>
                                 <thead>
@@ -418,15 +415,14 @@ function Lecturers()
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-                <div className={cx('lecturers_btn_add')}>
+                <div className={cx('Scoreup_btn_add')}>
                     <button type="">Thêm</button>
                 </div>
-            </div >
-        </div >
+            </div>
+        </div>
     );
 }
 
-export default Lecturers;
+export default Scoreup;

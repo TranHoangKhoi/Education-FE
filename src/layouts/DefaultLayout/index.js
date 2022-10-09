@@ -7,13 +7,42 @@ import Button from '~/components/Button';
 import React from 'react';
 import { Layout } from 'antd';
 import { Outlet } from 'react-router-dom';
+import { faAnglesLeft, faBell, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
+const menuItems = [
+    {
+        title: 'Thông báo và tin tức',
+        to: '/student',
+    },
+    {
+        title: 'Điểm danh',
+        to: '/student/attendance',
+    },
+    {
+        title: 'Điểm',
+        actions: faChevronRight,
+        childrens: [
+            {
+                title: 'Thay đổi lịch học',
+                to: 'gradebookbyterm',
+            },
+            {
+                title: 'Lịch sử học',
+                to: 'historyStudent',
+            },
+            {
+                title: 'Bảng điểm',
+                to: 'transcript',
+            },
+        ],
+    },
+];
 const DefaultLayout = () => {
     return (
         <Layout>
             <div className={cx('wrapper')}>
-                <Sidebar />
+                <Sidebar menuItems={menuItems} />
                 <header className={cx('header')}>
                     <div className={cx('header__topbar')}>
                         <a href="#" className={cx('header__topbar--item')}>
@@ -45,7 +74,6 @@ const DefaultLayout = () => {
                         <Outlet />
                     </div>
                 </main>
-
                 <footer className={cx('footer')}>
                     <div className={cx('footer__content')}>
                         <div className={cx('grid')}>

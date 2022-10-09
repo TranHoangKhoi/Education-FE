@@ -5,47 +5,8 @@ import SidebarItem from './SubSidebar/SidebarItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesLeft, faBell, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 const cx = classNames.bind(styles);
-function Sidebar()
-{
-    const menuItems = [
-        {
-            icon: <FontAwesomeIcon icon={faBell} />,
-            title: 'Thông báo và tin tức',
-            to: '/student',
-        },
-        {
-            icon: <FontAwesomeIcon icon={faBell} />,
-            title: 'Điểm danh',
-            to: '/student/attendance',
-        },
-        {
-            icon: <FontAwesomeIcon icon={faBell} />,
-            title: 'Điểm',
-            actions: faChevronRight,
-            childrens: [
-                {
-                    title: 'Thay đổi lịch học',
-                    to: 'gradebookbyterm',
-                },
-                {
-                    title: 'Lịch sử học',
-                    to: 'historyStudent',
-                },
-                {
-                    title: 'Bảng điểm',
-                    to: 'transcript',
-                },
-                {
-                    title: 'Giảng viên',
-                    to: 'lecturers',
-                },
-                {
-                    title: 'Xem điểm Giảng viên',
-                    to: 'viewscoreboard',
-                },
-            ],
-        },
-    ];
+function Sidebar(props) {
+    const { menuItems } = props;
     return (
         <div className={cx('aside')}>
             <div className={cx('aside_Brand')}>
