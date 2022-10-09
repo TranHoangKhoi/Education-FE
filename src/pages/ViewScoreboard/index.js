@@ -13,7 +13,7 @@ function ViewScoreboard()
                 <div className={cx('lecturers-semester')}>
                     <form className={cx('form-group')}>
                         <div>
-                            <label for="">Khóa học</label>
+                            <label >Khóa học</label>
                         </div>
                         <div>
                             <select name="" id="" disabled>
@@ -26,12 +26,12 @@ function ViewScoreboard()
                             <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
                         </div>
                     </form>
-                </div>
 
-                <div className={cx('lecturers-semester')}>
+
+
                     <form className={cx('form-group')}>
                         <div>
-                            <label for="">Học kỳ</label>
+                            <label >Học kỳ</label>
                         </div>
                         <div>
                             <select name="" id="" disabled>
@@ -44,15 +44,10 @@ function ViewScoreboard()
                             <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
                         </div>
                     </form>
-                </div>
 
-
-
-
-                <div className={cx('lecturers-semester')}>
                     <form className={cx('form-group')}>
                         <div>
-                            <label for="">Lớp</label>
+                            <label >Lớp</label>
                         </div>
                         <div>
                             <select name="" id="">
@@ -64,12 +59,10 @@ function ViewScoreboard()
                             <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
                         </div>
                     </form>
-                </div>
 
-                <div className={cx('lecturers-semester')}>
                     <form className={cx('form-group')}>
                         <div>
-                            <label for="">Môn học</label>
+                            <label >Môn học</label>
                         </div>
                         <div>
                             <select name="" id="">
@@ -84,9 +77,8 @@ function ViewScoreboard()
                     </form>
                 </div>
 
-
                 <div className={cx('lecturers-semester', 'flex-end')}>
-                    <form className={cx('form-group', 'rows', 'c-6')}>
+                    <form className={cx('form-groups', 'rows', 'c-6')}>
                         <div className={cx('search-student')}>
                             <input placeholder='VD: PC02104' />
                         </div>
@@ -95,8 +87,6 @@ function ViewScoreboard()
                         </div>
                     </form>
                 </div>
-
-
 
                 <div className={cx('lecturers__name-table')}>
                     <div className={cx('lecturers__name')}>

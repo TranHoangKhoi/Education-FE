@@ -30,17 +30,20 @@
     padding: var(--padding-lecturers);
     box-shadow: var(--box-shadow);
     margin-bottom: 20px;
-
+    .form-group {
+        margin-bottom: 24px;
+    }
     .rows {
         display: flex;
+        justify-content: flex-end;
     }
     .search-student {
         margin-right: 8px;
-        position: relative;
-        width: 90%;
+
+        width: 70%;
         input {
             flex: 1;
-            padding: 8px;
+            padding: 12px 8px;
             margin-right: 8px;
         }
     }

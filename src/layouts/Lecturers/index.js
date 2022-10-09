@@ -15,7 +15,8 @@ const menuItems = [
         to: 'viewscoreboard',
     },
 ];
-function Lecturer() {
+function Lecturer()
+{
     return (
         <Layout>
             <div className={cx('wrapper')}>
@@ -38,7 +39,7 @@ function Lecturer() {
                         <span className={cx('header__bottom--line')}></span>
                         <span className={cx('header__bottom--icon')}>
                             {/* <FontAwesomeIcon icon={faHouseDamage} /> */}
-                            <p classname={cx('header__bottom--subText')}>Điểm</p>
+                            <p className={cx('header__bottom--subText')}>Điểm</p>
                         </span>
                     </div>
                 </header>
