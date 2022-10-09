@@ -4,112 +4,106 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpZA, faArrowDownZA, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
-function Scoreup() {
+function Scoreup()
+{
     return (
         <div className={cx('content')}>
             <div className={cx('wrapper')}>
-                <div className={cx('Scoreup-shadow', 'row')}>
-                    <div className={cx('Scoreup-semester', 'c-6')}>
-                        <form className={cx('form-group')}>
-                            <div>
-                                <label for="">Khóa học New</label>
-                            </div>
-                            <div>
-                                <select name="" id="" disabled>
-                                    <option value="">Fall 2022</option>
-                                    <option value="">Summer 2022 </option>
-                                    <option value="">Spring 2022</option>
-                                </select>
-                            </div>
-                            <div>
-                                <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
-                            </div>
-                        </form>
-                    </div>
 
-                    <div className={cx('Scoreup-semester', 'c-6')}>
-                        <form className={cx('form-group')}>
-                            <div>
-                                <label for="">Học kỳ</label>
-                            </div>
-                            <div>
-                                <select name="" id="" disabled>
-                                    <option value="">Fall 2022</option>
-                                    <option value="">Summer 2022 </option>
-                                    <option value="">Spring 2022</option>
-                                </select>
-                            </div>
-                            <div>
-                                <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
-                            </div>
-                        </form>
-                    </div>
+                <div className={cx('lecturers-semester')}>
+                    <form className={cx('form-group')}>
+                        <div>
+                            <label for="">Khóa học</label>
+                        </div>
+                        <div>
+                            <select name="" id="" disabled>
+                                <option value="">Fall 2022</option>
+                                <option value="">Summer 2022 </option>
+                                <option value="">Spring 2022</option>
+                            </select>
+                        </div>
+                        <div>
+                            <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
+                        </div>
+                    </form>
                 </div>
 
-                <div className={cx('Scoreup-shadow', 'row')}>
-                    <div className={cx('Scoreup-semester', 'c-6')}>
-                        <form className={cx('form-group')}>
-                            <div>
-                                <label for="">Lớp</label>
-                            </div>
-                            <div>
-                                <select name="" id="">
-                                    <option value="">WE16301</option>
-                                </select>
-                            </div>
-                            <div>
-                                <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div className={cx('Scoreup-semester', 'c-6')}>
-                        <form className={cx('form-group')}>
-                            <div>
-                                <label for="">Môn học</label>
-                            </div>
-                            <div>
-                                <select name="" id="">
-                                    <option value="">Xây dựng trang Web 2 (WEB2033)</option>
-                                    <option value="">Summer 2022 </option>
-                                    <option value="">Spring 2022</option>
-                                </select>
-                            </div>
-                            <div>
-                                <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
-                            </div>
-                        </form>
-                    </div>
+                <div className={cx('lecturers-semester')}>
+                    <form className={cx('form-group')}>
+                        <div>
+                            <label for="">Học kỳ</label>
+                        </div>
+                        <div>
+                            <select name="" id="" disabled>
+                                <option value="">Fall 2022</option>
+                                <option value="">Summer 2022 </option>
+                                <option value="">Spring 2022</option>
+                            </select>
+                        </div>
+                        <div>
+                            <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
+                        </div>
+                    </form>
                 </div>
 
-                <div className={cx('Scoreup-shadow', 'center', 'row')}>
-                    <div className={cx('Scoreup-semester', 'c-6')}>
-                        <p>Danh sách lớp 16301</p>
-                    </div>
 
-                    <div className={cx('Scoreup-semester', 'c-6')}>
-                        <form className={cx('form-group')}>
-                            <div className={cx('search-student')}>
-                                <div>
-                                    {' '}
-                                    <input placeholder="VD: PC02104" />
-                                </div>
-                                <div className={cx('search__btn')}>
-                                    <button type="">
-                                        <FontAwesomeIcon icon={faMagnifyingGlass} />
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+
+
+                <div className={cx('lecturers-semester')}>
+                    <form className={cx('form-group')}>
+                        <div>
+                            <label for="">Lớp</label>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">WE16301</option>
+
+                            </select>
+                        </div>
+                        <div>
+                            <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
+                        </div>
+                    </form>
                 </div>
 
-                <div className={cx('Scoreup__name-table')}>
-                    <div className={cx('Scoreup__name')}>
+                <div className={cx('lecturers-semester')}>
+                    <form className={cx('form-group')}>
+                        <div>
+                            <label for="">Môn học</label>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">Xây dựng trang Web 2 (WEB2033)</option>
+                                <option value="">Summer 2022 </option>
+                                <option value="">Spring 2022</option>
+                            </select>
+                        </div>
+                        <div>
+                            <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
+                        </div>
+                    </form>
+                </div>
+
+
+                <div className={cx('lecturers-semester', 'flex-end')}>
+                    <form className={cx('form-group', 'rows', 'c-6')}>
+                        <div className={cx('search-student')}>
+                            <input placeholder='VD: PC02104' />
+                        </div>
+                        <div className={cx('search__btn')}>
+                            <button type=""><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+                        </div>
+                    </form>
+                </div>
+
+
+
+                <div className={cx('lecturers__name-table')}>
+                    <div className={cx('lecturers__name')}>
                         <p>Dương Thành Đạt</p>
                     </div>
 
-                    <div className={cx('Scoreup__btn')}>
+                    <div className={cx('lecturers__btn')}>
                         <button>Print</button>
                         <button>Copy</button>
                         <button>Excel</button>
@@ -117,7 +111,7 @@ function Scoreup() {
                         <button>PDF</button>
                     </div>
 
-                    <div className={cx('table__Scoreup')}>
+                    <div className={cx('table__lecturers')}>
                         <div className={cx('table__content')}>
                             <table>
                                 <thead>
@@ -258,15 +252,16 @@ function Scoreup() {
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
-                <div className={cx('Scoreup__name-table')}>
-                    <div className={cx('Scoreup__name')}>
+                <div className={cx('lecturers__name-table')}>
+                    <div className={cx('lecturers__name')}>
                         <p>1: Dương Thành Đạt</p>
                     </div>
 
-                    <div className={cx('Scoreup__btn')}>
+                    <div className={cx('lecturers__btn')}>
                         <button>Print</button>
                         <button>Copy</button>
                         <button>Excel</button>
@@ -274,7 +269,7 @@ function Scoreup() {
                         <button>PDF</button>
                     </div>
 
-                    <div className={cx('table__Scoreup')}>
+                    <div className={cx('table__lecturers')}>
                         <div className={cx('table__content')}>
                             <table>
                                 <thead>
@@ -415,13 +410,14 @@ function Scoreup() {
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
-                <div className={cx('Scoreup_btn_add')}>
-                    <button type="">Thêm</button>
+                <div className={cx('lecturers_btn_add')}>
+                    <button type="">Thêm Điểm</button>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }
 

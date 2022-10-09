@@ -9,101 +9,93 @@ function ViewScoreboard()
     return (
         <div className={cx('content')}>
             <div className={cx('wrapper')}>
-                <div className={cx('lecturers-shadow', 'row')}>
-                    <div className={cx('lecturers-semester', 'c-6')}>
-                        <form className={cx('form-group')}>
-                            <div>
-                                <label for="">Khóa học</label>
-                            </div>
-                            <div>
-                                <select name="" id="" disabled>
-                                    <option value="">Fall 2022</option>
-                                    <option value="">Summer 2022 </option>
-                                    <option value="">Spring 2022</option>
-                                </select>
-                            </div>
-                            <div>
-                                <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
-                            </div>
-                        </form>
-                    </div>
 
-                    <div className={cx('lecturers-semester', 'c-6')}>
-                        <form className={cx('form-group')}>
-                            <div>
-                                <label for="">Học kỳ</label>
-                            </div>
-                            <div>
-                                <select name="" id="" disabled>
-                                    <option value="">Fall 2022</option>
-                                    <option value="">Summer 2022 </option>
-                                    <option value="">Spring 2022</option>
-                                </select>
-                            </div>
-                            <div>
-                                <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
-                            </div>
-                        </form>
-                    </div>
+                <div className={cx('lecturers-semester')}>
+                    <form className={cx('form-group')}>
+                        <div>
+                            <label for="">Khóa học</label>
+                        </div>
+                        <div>
+                            <select name="" id="" disabled>
+                                <option value="">Fall 2022</option>
+                                <option value="">Summer 2022 </option>
+                                <option value="">Spring 2022</option>
+                            </select>
+                        </div>
+                        <div>
+                            <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
+                        </div>
+                    </form>
+                </div>
+
+                <div className={cx('lecturers-semester')}>
+                    <form className={cx('form-group')}>
+                        <div>
+                            <label for="">Học kỳ</label>
+                        </div>
+                        <div>
+                            <select name="" id="" disabled>
+                                <option value="">Fall 2022</option>
+                                <option value="">Summer 2022 </option>
+                                <option value="">Spring 2022</option>
+                            </select>
+                        </div>
+                        <div>
+                            <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
+                        </div>
+                    </form>
                 </div>
 
 
-                <div className={cx('lecturers-shadow', 'row')}>
-                    <div className={cx('lecturers-semester', 'c-6')}>
-                        <form className={cx('form-group')}>
-                            <div>
-                                <label for="">Lớp</label>
-                            </div>
-                            <div>
-                                <select name="" id="">
-                                    <option value="">WE16301</option>
 
-                                </select>
-                            </div>
-                            <div>
-                                <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
-                            </div>
-                        </form>
-                    </div>
 
-                    <div className={cx('lecturers-semester', 'c-6')}>
-                        <form className={cx('form-group')}>
-                            <div>
-                                <label for="">Môn học</label>
-                            </div>
-                            <div>
-                                <select name="" id="">
-                                    <option value="">Xây dựng trang Web 2 (WEB2033)</option>
-                                    <option value="">Summer 2022 </option>
-                                    <option value="">Spring 2022</option>
-                                </select>
-                            </div>
-                            <div>
-                                <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
-                            </div>
-                        </form>
-                    </div>
+                <div className={cx('lecturers-semester')}>
+                    <form className={cx('form-group')}>
+                        <div>
+                            <label for="">Lớp</label>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">WE16301</option>
+
+                            </select>
+                        </div>
+                        <div>
+                            <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
+                        </div>
+                    </form>
                 </div>
 
-                <div className={cx('lecturers-shadow', 'center', 'row')}>
-                    <div className={cx('lecturers-semester', 'c-6')}>
-                        <p>Danh sách lớp 16301</p>
-                    </div>
-
-                    <div className={cx('lecturers-semester', 'c-6')}>
-                        <form className={cx('form-group')}>
-                            <div className={cx('search-student')}>
-                                <div>  <input placeholder='VD: PC02104' /></div>
-                                <div className={cx('search__btn')}>
-                                    <button type=""><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
-                                </div>
-
-                            </div>
-
-
-                        </form>
-                    </div>
+                <div className={cx('lecturers-semester')}>
+                    <form className={cx('form-group')}>
+                        <div>
+                            <label for="">Môn học</label>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">Xây dựng trang Web 2 (WEB2033)</option>
+                                <option value="">Summer 2022 </option>
+                                <option value="">Spring 2022</option>
+                            </select>
+                        </div>
+                        <div>
+                            <span>Lựa chọn học kỳ để hiện thị chi tiết điểm theo kỳ</span>
+                        </div>
+                    </form>
                 </div>
+
+
+                <div className={cx('lecturers-semester', 'flex-end')}>
+                    <form className={cx('form-group', 'rows', 'c-6')}>
+                        <div className={cx('search-student')}>
+                            <input placeholder='VD: PC02104' />
+                        </div>
+                        <div className={cx('search__btn')}>
+                            <button type=""><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+                        </div>
+                    </form>
+                </div>
+
 
 
                 <div className={cx('lecturers__name-table')}>

@@ -22,71 +22,70 @@
     }
 }
 
-.lecturers-shadow {
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+.lecturers-semester {
+    padding: var(--padding-lecturers);
     box-shadow: var(--box-shadow);
     margin-bottom: 20px;
-    display: flex;
-    align-items: center;
 
-    .lecturers-semester {
-        padding: var(--padding-lecturers);
-
-        .search-student {
-            display: flex;
-            width: 100%;
-            position: relative;
-
-            input {
-                flex: 1;
-                width: 425px;
-                padding: 8px;
-                margin-right: 8px;
-            }
-            .search__btn {
-                button {
-                    width: 52px;
-                    height: 100%;
-                    border-radius: var(--border-radius-btn);
-                    background-color: var(--primary-color);
-                    color: #fff;
-                }
-            }
-        }
-
-        label {
-            display: block;
-            font-size: 1.7rem;
-        }
-
-        select {
-            width: 100%;
-            margin: 8px 0px;
-            padding: 8px 4px;
-            outline: none;
-            border-radius: 4px;
-            &:focus-within {
-                border-color: #007bff;
-            }
-        }
-
-        span {
-        }
-
+    .rows {
+        display: flex;
+    }
+    .search-student {
+        margin-right: 8px;
+        position: relative;
+        width: 90%;
         input {
-            border: 1px solid gray;
-            padding: 8px 4px;
-            width: 100%;
+            flex: 1;
+            padding: 8px;
+            margin-right: 8px;
+        }
+    }
+    .search__btn {
+        button {
+            width: 52px;
+            height: 100%;
             border-radius: var(--border-radius-btn);
+            background-color: var(--primary-color);
+            color: #fff;
         }
+    }
 
-        p {
-            font-size: 1.8rem;
+    label {
+        display: block;
+        font-size: 1.7rem;
+    }
+
+    select {
+        width: 100%;
+        margin: 8px 0px;
+        padding: 8px 4px;
+        outline: none;
+        border-radius: 4px;
+        &:focus-within {
+            border-color: #007bff;
         }
+    }
+
+    span {
+    }
+
+    input {
+        border: 1px solid gray;
+        padding: 8px 4px;
+        width: 100%;
+        border-radius: var(--border-radius-btn);
+    }
+
+    p {
+        font-size: 1.8rem;
     }
 }
 
 .lecturers__name-table {
-    margin: 0 -12px;
     margin-bottom: 20px;
     box-shadow: var(--box-shadow);
     padding-bottom: 24px;

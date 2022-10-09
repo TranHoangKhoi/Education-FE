@@ -1,10 +1,10 @@
 :root {
-    --padding-Scoreup: 20px;
+    --padding-lecturers: 20px;
     --border-radius-btn: 4px;
 }
 
 .wrapper {
-    .Scoreup_btn_add {
+    .lecturers_btn_add {
         display: flex;
         justify-content: flex-end;
 
@@ -22,85 +22,84 @@
     }
 }
 
-.Scoreup-shadow {
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+.lecturers-semester {
+    padding: var(--padding-lecturers);
     box-shadow: var(--box-shadow);
     margin-bottom: 20px;
-    display: flex;
-    align-items: center;
 
-    .Scoreup-semester {
-        padding: var(--padding-Scoreup);
-
-        .search-student {
-            display: flex;
-            width: 100%;
-            position: relative;
-
-            input {
-                flex: 1;
-                width: 425px;
-                padding: 8px;
-                margin-right: 8px;
-            }
-            .search__btn {
-                button {
-                    width: 52px;
-                    height: 100%;
-                    border-radius: var(--border-radius-btn);
-                    background-color: var(--primary-color);
-                    color: #fff;
-                }
-            }
-        }
-
-        label {
-            display: block;
-            font-size: 1.7rem;
-        }
-
-        select {
-            width: 100%;
-            margin: 8px 0px;
-            padding: 8px 4px;
-            outline: none;
-            border-radius: 4px;
-            &:focus-within {
-                border-color: #007bff;
-            }
-        }
-
-        span {
-        }
-
+    .rows {
+        display: flex;
+    }
+    .search-student {
+        margin-right: 8px;
+        position: relative;
+        width: 90%;
         input {
-            border: 1px solid gray;
-            padding: 8px 4px;
-            width: 100%;
+            flex: 1;
+            padding: 8px;
+            margin-right: 8px;
+        }
+    }
+    .search__btn {
+        button {
+            width: 52px;
+            height: 100%;
             border-radius: var(--border-radius-btn);
+            background-color: var(--primary-color);
+            color: #fff;
         }
+    }
 
-        p {
-            font-size: 1.8rem;
+    label {
+        display: block;
+        font-size: 1.7rem;
+    }
+
+    select {
+        width: 100%;
+        margin: 8px 0px;
+        padding: 8px 4px;
+        outline: none;
+        border-radius: 4px;
+        &:focus-within {
+            border-color: #007bff;
         }
+    }
+
+    span {
+    }
+
+    input {
+        border: 1px solid gray;
+        padding: 8px 4px;
+        width: 100%;
+        border-radius: var(--border-radius-btn);
+    }
+
+    p {
+        font-size: 1.8rem;
     }
 }
 
-.Scoreup__name-table {
-    margin: 0 -12px;
+.lecturers__name-table {
     margin-bottom: 20px;
     box-shadow: var(--box-shadow);
     padding-bottom: 24px;
-    .Scoreup__name {
-        padding: var(--padding-Scoreup);
+    .lecturers__name {
+        padding: var(--padding-lecturers);
         border-bottom: 1px solid #ebedf2;
         p {
             font-size: 1.8rem;
         }
     }
-    .Scoreup__btn {
+    .lecturers__btn {
         display: flex;
         justify-content: flex-end;
-        padding: var(--padding-Scoreup);
+        padding: var(--padding-lecturers);
 
         button {
             padding: 8px;
@@ -125,7 +124,7 @@
             }
         }
     }
-    .table__Scoreup {
+    .table__lecturers {
         padding: 0 20px;
         .table__content {
             padding: 4px 0;
@@ -186,7 +185,7 @@
             }
         }
         .table__control--right {
-            .tbl__ctrl--Scoreup {
+            .tbl__ctrl--lecturers {
             }
 
             .tbl__ctrl--list {
