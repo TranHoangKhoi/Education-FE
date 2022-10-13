@@ -4,7 +4,6 @@ import { Layout, Breadcrumb } from 'antd';
 import { Outlet } from 'react-router-dom';
 import SidebarAdmin from '~/admin/components/SidebarAdmin';
 const cx = classNames.bind(styles);
-const { Content } = Layout;
 
 function DefaultLayoutAdmin() {
     return (

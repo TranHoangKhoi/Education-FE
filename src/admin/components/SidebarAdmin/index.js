@@ -16,7 +16,7 @@ const { Sider, Content } = Layout;
 // }
 const MenuAdmins = [
     {
-        // key: '1',
+        key: '1',
         label: 'Quản lý điểm',
         path: 'pointmanagement',
         icon: <DesktopOutlined />,
@@ -34,24 +34,25 @@ const MenuAdmins = [
         icon: <DesktopOutlined />,
     },
     {
+        key: '4',
         label: 'Quản lý môn học',
         path: 'subjectmanagement',
         icon: <DesktopOutlined />,
     },
     {
-        key: '4',
+        key: '5',
         label: 'Quản lý tài khoản',
         path: 'accountmanagement',
         icon: <DesktopOutlined />,
     },
     {
-        key: '5',
+        key: '6',
         label: 'Quản lý lớp',
         path: 'classmanager',
         icon: <DesktopOutlined />,
     },
     {
-        key: '6',
+        key: '7',
         label: 'Quản lý phúc khảo',
         path: 'reviewmanagement',
         icon: <DesktopOutlined />,

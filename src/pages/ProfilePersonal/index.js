@@ -28,6 +28,17 @@ function ProfilePersonal() {
                                             </div>
                                         </div>
                                     </div>
+                                    <div className={cx('profile__widget--body')}>
+                                        <div className={cx('profile__widget--content')}>
+                                            <div className={cx('profile__widget--info')}>
+                                                <span className={cx('profile__widget--label')}>Email:</span>
+                                                <a href="#" className={cx('profile__widget--data')}>
+                                                    dattmpc02133@fpt.edu.vn
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className={cx('profile__widget--items')}></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
