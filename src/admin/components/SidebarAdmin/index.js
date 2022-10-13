@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import 'antd/dist/antd.css';
 import './SidebarAdmin.module.scss';
-// import { DesktopOutlined, FileOutlined, PieChartOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons';
+import { DesktopOutlined } from '@ant-design/icons';
 import { Layout, Menu, Breadcrumb } from 'antd';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const { Sider, Content } = Layout;
 
 // function getItem(label, key, icon, children) {
@@ -16,36 +16,62 @@ const { Sider, Content } = Layout;
 // }
 const MenuAdmins = [
     {
+        // key: '1',
         label: 'Quản lý điểm',
-        key: 'pointmanagement',
+        path: 'pointmanagement',
+        icon: <DesktopOutlined />,
     },
     {
+        key: '2',
         label: 'Quản lý thông báo',
-        key: 'managenotifications',
+        path: 'managenotifications',
+        icon: <DesktopOutlined />,
     },
     {
+        key: '3',
         label: 'Quản lý thông tin liên hệ',
-        key: 'contactinformation',
+        path: 'contactinformation',
+        icon: <DesktopOutlined />,
     },
     {
         label: 'Quản lý môn học',
-        key: 'subjectmanagement',
+        path: 'subjectmanagement',
+        icon: <DesktopOutlined />,
     },
     {
+        key: '4',
         label: 'Quản lý tài khoản',
-        key: 'accountmanagement',
+        path: 'accountmanagement',
+        icon: <DesktopOutlined />,
     },
     {
+        key: '5',
         label: 'Quản lý lớp',
-        key: 'classmanager',
+        path: 'classmanager',
+        icon: <DesktopOutlined />,
     },
     {
+        key: '6',
         label: 'Quản lý phúc khảo',
-        key: 'reviewmanagement',
+        path: 'reviewmanagement',
+        icon: <DesktopOutlined />,
     },
 ];
+// const dataNEw = MenuAdmins.map((item, index) => {
+//     return {
+//         key: index + 1,
+//         path: item.path,
+//     };
+// });
+// console.log(dataNEw);
 const SidebarAdmin = () => {
     const [collapsed, setCollapsed] = useState(false);
+    const navigate = useNavigate();
+    const onClickMenu = (item) => {
+        const clicked = MenuAdmins.find((_item) => _item.key === item.key);
+        console.log('clicked', clicked);
+        navigate(clicked.path);
+    };
 
     return (
         <Layout
@@ -56,17 +82,22 @@ const SidebarAdmin = () => {
         >
             <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
                 <div className="logo" />
-                <Menu theme="dark" mode="inline">
-                    {MenuAdmins.map((data, index) => {
+                <Menu theme="dark" items={MenuAdmins} mode="inline" onClick={onClickMenu}>
+                    {MenuAdmins.map((item) => (
+                        <Menu.Item key={item.key}>{item.label}</Menu.Item>
+                    ))}
+                </Menu>
+                {/* {MenuAdmins.map((data, index) => {
                         return (
                             <Menu.Item key={index}>
+                                {data?.icon}
                                 <Link to={data?.key} key={index}>
                                     {data?.label}
                                 </Link>
                             </Menu.Item>
                         );
                     })}
-                </Menu>
+                </Menu> */}
             </Sider>
         </Layout>
     );
