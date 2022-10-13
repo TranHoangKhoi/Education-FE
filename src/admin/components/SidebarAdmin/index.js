@@ -4,7 +4,7 @@ import './SidebarAdmin.module.scss';
 // import { DesktopOutlined, FileOutlined, PieChartOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { Link } from 'react-router-dom';
-const { Sider } = Layout;
+const { Sider, Content } = Layout;
 
 // function getItem(label, key, icon, children) {
 //     return {
@@ -17,31 +17,31 @@ const { Sider } = Layout;
 const MenuAdmins = [
     {
         label: 'Quản lý điểm',
-        key: 'PointManagement',
+        key: 'pointmanagement',
     },
     {
         label: 'Quản lý thông báo',
-        key: 'ManageNotifications',
+        key: 'managenotifications',
     },
     {
         label: 'Quản lý thông tin liên hệ',
-        key: 'ContactInformation',
+        key: 'contactinformation',
     },
     {
         label: 'Quản lý môn học',
-        key: 'SubjectManagement',
+        key: 'subjectmanagement',
     },
     {
         label: 'Quản lý tài khoản',
-        key: 'AccountManagement',
+        key: 'accountmanagement',
     },
     {
         label: 'Quản lý lớp',
-        key: 'ClassManager',
+        key: 'classmanager',
     },
     {
         label: 'Quản lý phúc khảo',
-        key: 'ReviewManagement',
+        key: 'reviewmanagement',
     },
 ];
 const SidebarAdmin = () => {
@@ -51,11 +51,12 @@ const SidebarAdmin = () => {
         <Layout
             style={{
                 minHeight: '100vh',
+                backgroundColor: '#fff',
             }}
         >
             <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
                 <div className="logo" />
-                <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+                <Menu theme="dark" mode="inline">
                     {MenuAdmins.map((data, index) => {
                         return (
                             <Menu.Item key={index}>

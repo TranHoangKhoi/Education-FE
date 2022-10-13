@@ -39,18 +39,18 @@ const menuItems = [
 
 const DefaultLayout = () => {
     return (
-        <Layout>
+        <Layout style={{ backgroundColor: '#fff' }}>
             <div className={cx('wrapper')}>
                 <Sidebar menuItems={menuItems} />
                 <header className={cx('header')}>
                     <div className={cx('header__topbar')}>
-                        <a href="#" className={cx('header__topbar--item')}>
+                        <Link className={cx('header__topbar--item')}>
                             <div className={cx('header__topbar--wrapper')}>
                                 <span className={cx('header__topbar--icon')}>
                                     <FontAwesomeIcon className={cx('logout')} icon={faRightToBracket} />
                                 </span>
                             </div>
-                        </a>
+                        </Link>
                         <div className={cx('header__topbar-item--user')}>
                             <div className={cx('header__topbar-item--welcome')}>Xin chào,</div>
                             <div className={cx('header__topbar-item--username')}>Đạt</div>
@@ -137,7 +137,7 @@ const DefaultLayout = () => {
                                                 </p>
                                                 <ul className={cx('info__content--list')}>
                                                     <li>
-                                                        Phòng dịch vụ sinh viên:{' '}
+                                                        Phòng dịch vụ sinh viên:
                                                         <span className={cx('strong')}>dvsvpoly.ct@poly.edu.vn</span>
                                                     </li>
                                                     <li>

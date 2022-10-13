@@ -12,6 +12,12 @@ import Lecturers from './layouts/Lecturers';
 import Scoreup from './pages/Scoreup';
 import DefaultLayoutAdmin from './admin/pages/DefaultLayoutAdmin';
 import PointManagement from './admin/pages/PointManagement';
+import ManageNotifications from './admin/pages/ManageNotifications';
+import ContactInformation from './admin/pages/ContactInformation';
+import SubjectManagement from './admin/pages/SubjectManagement';
+import AccountManagement from './admin/pages/AccountManagement';
+import ClassManager from './admin/pages/ClassManager';
+import ReviewManagement from './admin/pages/ReviewManagement';
 
 function App() {
     return (
@@ -33,7 +39,13 @@ function App() {
                 </Route>
 
                 <Route path="/admin" element={<DefaultLayoutAdmin />}>
-                    <Route path="PointManagement" element={<PointManagement />} />
+                    <Route path="pointmanagement" element={<PointManagement />} />
+                    <Route path="managenotifications" element={<ManageNotifications />} />
+                    <Route path="contactinformation" element={<ContactInformation />} />
+                    <Route path="subjectmanagement" element={<SubjectManagement />} />
+                    <Route path="accountmanagement" element={<AccountManagement />} />
+                    <Route path="classmanager" element={<ClassManager />} />
+                    <Route path="reviewmanagement" element={<ReviewManagement />} />
                 </Route>
             </Routes>
         </Router>
