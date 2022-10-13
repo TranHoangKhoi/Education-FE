@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import style from './Header.module.scss';
+import { isLogin } from '~/service/constant';
+import { HandleLogin } from '~/service';
 
 const cx = classNames.bind(style);
 
@@ -17,12 +19,12 @@ function Header() {
                 <div className={cx('navbar')}>
                     <ul className={cx('navbar__list')}>
                         <li className={cx('navbar__item')}>
-                            <Link to="/student" className={cx('navbar__link')}>
+                            <Link to={HandleLogin() ? '/student' : '/login'} className={cx('navbar__link')}>
                                 Sinh viên
                             </Link>
                         </li>
                         <li className={cx('navbar__item')}>
-                            <Link to="/lecturers" className={cx('navbar__link')}>
+                            <Link to={HandleLogin() ? '/lecturers' : '/login'} className={cx('navbar__link')}>
                                 Giảng viên
                             </Link>
                         </li>

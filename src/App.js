@@ -7,35 +7,16 @@ import HistoryStudent from './pages/HistoryStudent';
 import Transcript from './pages/Transcript';
 import GradeBookByTerm from './pages/GradeBookByTerm';
 import ViewScoreboard from './pages/ViewScoreboard';
+import ProfilePersonal from './pages/ProfilePersonal';
 import Lecturers from './layouts/Lecturers';
 import Scoreup from './pages/Scoreup';
-// import Student from './pages/Student';
+import DefaultLayoutAdmin from './admin/pages/DefaultLayoutAdmin';
+import PointManagement from './admin/pages/PointManagement';
+
 function App() {
     return (
         <Router>
             <Routes>
-                {/* <Route>
-                    {privateRoute.map((route, index) => {
-                        const Page = route.component;
-                        let Layout = DefaultLayout;
-                        if (route.layout) {
-                            Layout = route.layout;
-                        } else if (route.layout === null) {
-                            Layout = Fragment;
-                        }
-                        return (
-                            <Route
-                                key={index}
-                                path={route.path}
-                                element={
-                                    <Layout>
-                                        <Page />
-                                    </Layout>
-                                }
-                            />
-                        );
-                    })}
-                </Route> */}
                 <Route path="/" element={<DashboardLayout />} />
                 <Route path="/student" element={<DefaultLayout />}>
                     <Route path="" element={<Notification />} />
@@ -44,11 +25,15 @@ function App() {
                     <Route path="transcript" element={<Transcript />} />
                     <Route path="gradebookbyterm" element={<GradeBookByTerm />} />
                     <Route path="viewscoreboard" element={<ViewScoreboard />} />
+                    <Route path="profilepersonal" element={<ProfilePersonal />} />
                 </Route>
-
                 <Route path="/lecturers" element={<Lecturers />}>
                     <Route path="scoreup" element={<Scoreup />} />
                     <Route path="viewscoreboard" element={<ViewScoreboard />} />
+                </Route>
+
+                <Route path="/admin" element={<DefaultLayoutAdmin />}>
+                    <Route path="PointManagement" element={<PointManagement />} />
                 </Route>
             </Routes>
         </Router>

@@ -3,11 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightToBracket, faHouseDamage, faLocationDot, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames/bind';
 import styles from '../components/Sidebar/Sidebar.module.scss';
-import Button from '~/components/Button';
-import React from 'react';
 import { Layout } from 'antd';
-import { Outlet } from 'react-router-dom';
-import { faAnglesLeft, faBell, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { Link, Outlet } from 'react-router-dom';
+import { faIdBadge, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 const menuItems = [
@@ -38,6 +36,7 @@ const menuItems = [
         ],
     },
 ];
+
 const DefaultLayout = () => {
     return (
         <Layout>
@@ -48,15 +47,34 @@ const DefaultLayout = () => {
                         <a href="#" className={cx('header__topbar--item')}>
                             <div className={cx('header__topbar--wrapper')}>
                                 <span className={cx('header__topbar--icon')}>
-                                    <Button primary onClick={() => alert('123')}>
-                                        <FontAwesomeIcon className={cx('logout')} icon={faRightToBracket} />
-                                    </Button>
+                                    <FontAwesomeIcon className={cx('logout')} icon={faRightToBracket} />
                                 </span>
                             </div>
                         </a>
                         <div className={cx('header__topbar-item--user')}>
                             <div className={cx('header__topbar-item--welcome')}>Xin chào,</div>
                             <div className={cx('header__topbar-item--username')}>Đạt</div>
+                        </div>
+                        <div className={cx('dropdown_student')}>
+                            <div className={cx('dropdown_student--title')}>
+                                <div className={cx('dropdown_student--Name')}>Trần Minh Đạt</div>
+                            </div>
+                            <div className={cx('notification')}>
+                                <Link to={'profilepersonal'} className={cx('notification__item')}>
+                                    <div className={cx('notification__item-icon')}>
+                                        <FontAwesomeIcon icon={faIdBadge} className={cx('itemIcon')} />
+                                    </div>
+                                    <div className={cx('notification__item-details')}>
+                                        <div className={cx('notification__item-title')}>Hồ sơ cá nhân</div>
+                                        <div className={cx('notification__item-time')}>Thông tin cá nhân</div>
+                                    </div>
+                                </Link>
+                                <div className={cx('notification__custom')}>
+                                    <Link to={'logout'} className={cx('notification_btn-login')}>
+                                        Đăng xuất
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

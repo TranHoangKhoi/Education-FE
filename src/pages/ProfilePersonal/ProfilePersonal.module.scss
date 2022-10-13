@@ -1,0 +1,109 @@
+:root {
+    --color-while {
+        color: #fff;
+    }
+}
+.content {
+    padding: 2.5rem 0;
+}
+.profile,
+.profile__body {
+    display: flex;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    box-shadow: 0 0 13px 0 rgb(82 63 105 / 5%);
+    background-color: #fff;
+    border-radius: 4px;
+    .profile__head {
+        display: flex;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 0 25px;
+        border-bottom: 1px solid #ebedf2;
+        min-height: 60px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+}
+
+.profile__widget--head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.profile__widget--media > img {
+    width: 90px;
+    max-width: 100%;
+    border-radius: 8px;
+}
+.profile__widget--content {
+    padding-left: 1.6rem;
+    .profile__widget--section {
+        display: flex;
+        flex-direction: column;
+        .profile__widget--subtile {
+            padding: 1.25rem 0 0;
+            font-weight: 500;
+            color: #74788d;
+        }
+    }
+
+    .profile__widget--username {
+        font-weight: 500;
+        font-size: 1.3em;
+        svg {
+            padding-left: 0.4rem;
+        }
+    }
+}
+.profile__widget--user {
+    padding: 2.5rem;
+}
+.portlet__head-title {
+    font-size: 1.3em;
+}
+.portlet {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-shadow: 0 0 13px 0 rgb(82 63 105 / 5%);
+    box-shadow: 0 0 13px 0 rgb(82 63 105 / 5%);
+    background-color: #fff;
+    border-radius: 4px;
+    .portlet__head {
+        display: flex;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -webkit-box-pack: justify;
+        position: relative;
+        padding: 0 25px;
+        border-bottom: 1px solid #ebedf2;
+        min-height: 60px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+    .portlet__head-title {
+        font-size: 1.3em;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ebedf2;
+    }
+}

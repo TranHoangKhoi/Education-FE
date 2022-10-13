@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faAnglesLeft, faBell, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
 import classNames from 'classnames/bind';
 import styles from './SidebarItem.module.scss';
 import { Link } from 'react-router-dom';

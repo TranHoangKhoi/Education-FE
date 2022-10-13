@@ -8,10 +8,17 @@
 }
 :root {
     --border: 1px solid #eff0f6;
+    --background-color-while: #fff;
     --header-top-height: 65px;
     --header-bottom-height: 54px;
     --sideBar-width: 265px;
     --box-shadow: 0 0 28px 0 rgb(82 63 105 / 8%);
+    --dropdown-width: 380px;
+    --color-while: #fff;
+    --size-icon: 2rem;
+    --icon--width: 4.4rem;
+    --icon--height: 4.4rem;
+    --height: 4.4rem;
 }
 .aside {
     position: fixed;
@@ -22,7 +29,7 @@
     height: 100%;
     z-index: 99;
     flex-direction: column;
-    background-color: #fff;
+    background-color: var(--color-while);
     box-shadow: var(--box-shadow);
 }
 #nav_toggle:checked + .aside {
@@ -80,7 +87,7 @@
     display: inline-flex;
     align-items: center;
     color: var(--black-color);
-    min-height: 44px;
+    min-height: var(--height);
     .navBar__Link--Icon {
         color: var(--color-icon-aside);
         flex: 0 0 30px;
@@ -106,7 +113,90 @@
 .navBar__Link--actions {
     font-size: 0.7rem !important;
 }
-
+// header ẩn
+.dropdown_student {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    transform: translate3d(859px, 64px, 0px);
+    min-width: var(--dropdown-width);
+    background-color: var(--color-while);
+}
+.dropdown_student--title {
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem 1rem;
+    background-color: var(--color-while);
+    background-image: url(https://ap.poly.edu.vn/theme/student_v2/media/misc/bg-1.jpg);
+}
+.dropdown_student--Name {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    color: var(--color-while);
+    padding-left: 1rem;
+}
+.notification {
+    min-width: 100%;
+}
+.notification__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+    border-bottom: 1px solid #f7f8fa;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    .notification__item-details {
+        flex: 1;
+        flex-direction: column;
+    }
+    &:hover {
+        -webkit-transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        background-color: #f7f8fa;
+    }
+}
+.notification__item-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 2.5rem;
+    flex: 0 0 2.5rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    .itemIcon {
+        font-size: var(--size-icon);
+        font-weight: 900;
+    }
+}
+.notification__custom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-top: 1px solid var(--color-while);
+    padding: 1.5rem 1.5rem;
+    .notification_btn-login {
+        background-color: rgba(93, 120, 255, 0.1);
+        color: #5d78ff;
+        padding: 0.5rem 0.5rem;
+        border-radius: 0.2rem;
+        font-weight: 500;
+    }
+}
 // header
 .header {
     // display: flex;
@@ -142,8 +232,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 44px;
-    width: 44px;
+    height: var(--icon--height);
+    width: var(--icon--width);
     cursor: pointer;
     &:hover {
         transition: all 0.3s;
@@ -165,7 +255,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 44px;
+    height: var(--height);
     cursor: pointer;
     border-radius: 4px;
 }
