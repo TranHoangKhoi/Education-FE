@@ -16,10 +16,16 @@ import ManageNotifications from './admin/pages/ManageNotifications';
 import ContactInformation from './admin/pages/ContactInformation';
 import SubjectManagement from './admin/pages/SubjectManagement';
 import AccountManagement from './admin/pages/AccountManagement';
-import ClassManager from './admin/pages/ClassManager';
+// import ClassManager from './admin/pages/ClassManager';
 import ReviewManagement from './admin/pages/ReviewManagement';
 
-function App() {
+//classmanager
+import { AddClass, ListClass } from './admin/pages/ClassManager';
+
+
+
+function App()
+{
     return (
         <Router>
             <Routes>
@@ -44,7 +50,10 @@ function App() {
                     <Route path="contactinformation" element={<ContactInformation />} />
                     <Route path="subjectmanagement" element={<SubjectManagement />} />
                     <Route path="accountmanagement" element={<AccountManagement />} />
-                    <Route path="classmanager" element={<ClassManager />} />
+                    {/* <Route path="classmanager" element={<ClassManager />} /> */}
+                    <Route path="addclass" element={<AddClass />} />
+                    <Route path="listclass" element={<ListClass />} />
+
                     <Route path="reviewmanagement" element={<ReviewManagement />} />
                 </Route>
             </Routes>

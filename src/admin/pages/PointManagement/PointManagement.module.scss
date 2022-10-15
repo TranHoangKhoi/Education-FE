@@ -1,0 +1,240 @@
+:root {
+    --padding-lecturers: 20px;
+    --border-radius-btn: 4px;
+}
+.content {
+    // width: 1100px;
+    // margin: 0 auto;
+}
+
+.wrapper {
+    .lecturers_btn_add {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            margin-right: 8px;
+            padding: 16px 12px;
+            width: 100px;
+            border-radius: var(--border-radius-btn);
+            background-color: var(--primary-color);
+            color: #fff;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+.lecturers-semester {
+    padding: var(--padding-lecturers);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+    .df {
+        justify-content: space-between;
+    }
+    .form-group {
+        margin-bottom: 24px;
+        padding: 4px;
+    }
+    .rows {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .search-student {
+        margin-right: 8px;
+
+        width: 70%;
+        input {
+            flex: 1;
+            padding: 12px 8px;
+            margin-right: 8px;
+        }
+    }
+    .search__btn {
+        button {
+            width: 52px;
+            height: 100%;
+            border-radius: var(--border-radius-btn);
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+    }
+
+    label {
+        display: block;
+        font-size: 1.7rem;
+    }
+
+    select {
+        width: 100%;
+        margin: 8px 0px;
+        padding: 8px 4px;
+        outline: none;
+        border-radius: 4px;
+        &:focus-within {
+            border-color: #007bff;
+        }
+    }
+
+    span {
+    }
+
+    input {
+        border: 1px solid gray;
+        padding: 8px 4px;
+        width: 100%;
+        border-radius: var(--border-radius-btn);
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+}
+
+.lecturers__name-table {
+    margin-bottom: 20px;
+    box-shadow: var(--box-shadow);
+    padding-bottom: 24px;
+    .lecturers__name {
+        padding: var(--padding-lecturers);
+        border-bottom: 1px solid #ebedf2;
+        p {
+            font-size: 1.8rem;
+        }
+    }
+    .lecturers__btn {
+        display: flex;
+        justify-content: flex-end;
+        padding: var(--padding-lecturers);
+
+        button {
+            padding: 8px;
+            color: #fff;
+            background-color: #6c757d;
+            border-color: #6c757d;
+
+            &:nth-child(1) {
+                border-top-left-radius: var(--border-radius-btn);
+                border-bottom-left-radius: var(--border-radius-btn);
+            }
+
+            &:nth-child(5) {
+                border-top-right-radius: var(--border-radius-btn);
+                border-bottom-right-radius: var(--border-radius-btn);
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: #5a6268;
+                border-color: #545b62;
+            }
+        }
+    }
+    .table__lecturers {
+        padding: 0 20px;
+        .table__content {
+            padding: 4px 0;
+            margin-bottom: 20px;
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            th {
+                padding: 22px 8px !important;
+            }
+
+            table,
+            th,
+            td {
+                border: 1px solid #eee;
+                padding: 16px 8px;
+            }
+
+            td {
+                font-size: 1.4rem;
+            }
+
+            .tbl__heading--item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: var(--black-color);
+            }
+
+            .tbl__arr--down,
+            .tbl__arr--up {
+                color: #999;
+                font-size: 1.2rem;
+            }
+
+            .tbl__arr--down {
+                display: none;
+            }
+
+            .success {
+                color: #02b875;
+            }
+        }
+
+        .table__control {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .table__control--left {
+            span {
+                font-size: 1.3rem;
+            }
+        }
+        .table__control--right {
+            .tbl__ctrl--lecturers {
+            }
+
+            .tbl__ctrl--list {
+                display: flex;
+                align-items: center;
+                list-style: none;
+            }
+
+            .tbl__ctrl--btn {
+                padding: 8px;
+                font-size: 1.4rem;
+                border-radius: 4px;
+            }
+
+            .tbl__ctrl--btn + .tbl__ctrl--btn {
+                margin-left: 8px;
+            }
+
+            .ctrl__btn {
+                background-color: #ccc;
+                color: #555;
+                cursor: pointer;
+            }
+
+            .num__btn {
+                padding: 8px 12px;
+            }
+
+            .num__btn.active {
+                background-color: var(--primary-color);
+                color: #fff;
+            }
+
+            .ctrl__btn.disabled {
+                background-color: #eee;
+                color: #999;
+                pointer-events: none;
+            }
+        }
+    }
+}

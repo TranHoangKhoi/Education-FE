@@ -1,5 +1,3 @@
-function ClassManager() {
-    return <div>ClassManager</div>;
-}
+export { default as AddClass } from './AddClass'
+export { default as ListClass } from './ListClass'
 
-export default ClassManager;

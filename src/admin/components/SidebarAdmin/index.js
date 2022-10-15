@@ -28,6 +28,12 @@ const MenuAdmins = [
         icon: <DesktopOutlined />,
     },
     {
+        key: '8',
+        label: 'Quản lý loại thông báo',
+        path: 'managenotifications',
+        icon: <DesktopOutlined />,
+    },
+    {
         key: '3',
         label: 'Quản lý thông tin liên hệ',
         path: 'contactinformation',
@@ -65,10 +71,12 @@ const MenuAdmins = [
 //     };
 // });
 // console.log(dataNEw);
-const SidebarAdmin = () => {
+const SidebarAdmin = () =>
+{
     const [collapsed, setCollapsed] = useState(false);
     const navigate = useNavigate();
-    const onClickMenu = (item) => {
+    const onClickMenu = (item) =>
+    {
         const clicked = MenuAdmins.find((_item) => _item.key === item.key);
         console.log('clicked', clicked);
         navigate(clicked.path);
