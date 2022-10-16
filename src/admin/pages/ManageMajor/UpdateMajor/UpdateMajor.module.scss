@@ -1,0 +1,74 @@
+.content {
+    width: 100%;
+    .center {
+        text-align: center;
+    }
+}
+.wrapper {
+    padding-top: 0.4rem;
+}
+
+.form-group {
+    width: 60%;
+    margin: 0 auto;
+    padding: var(--padding-lecturers);
+    padding-bottom: 2rem;
+    .wrapper-item {
+        padding-bottom: 1.5rem;
+        label {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+        input {
+            margin-top: 0;
+            padding: 12px 8px;
+            width: 100%;
+            border: var(--border-color);
+            border-radius: var(--border-radius-admin);
+            font-size: 1.5rem;
+            opacity: 0.8;
+            outline: none;
+            &:focus-within {
+                border-color: var(--border-focus);
+            }
+        }
+
+        select {
+            width: 100%;
+            padding: 12px 8px;
+            font-size: 1.5rem;
+            outline: none;
+            border: var(--border-color);
+            border-radius: 4px;
+            &:focus-within {
+                border-color: var(--border-focus);
+            }
+        }
+
+        button {
+            color: var(--color-admin);
+            background-color: var(--primary-admin);
+            padding: 16px 8px;
+            width: 100px;
+
+            border-radius: var(--border-radius-admin);
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        textarea {
+            padding: 4px 8px;
+            width: 100%;
+            min-height: 8rem;
+            border: var(--border-color);
+            outline: none;
+            font-size: 1.5rem;
+            border-radius: var(--border-radius-admin);
+            &:focus-within {
+                border-color: var(--border-focus);
+            }
+        }
+    }
+}

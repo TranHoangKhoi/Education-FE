@@ -30,7 +30,7 @@ const MenuAdmins = [
     {
         key: '8',
         label: 'Quản lý loại thông báo',
-        path: 'managenotifications',
+        path: 'manageCategoryNotifications',
         icon: <DesktopOutlined />,
     },
     {
@@ -59,8 +59,20 @@ const MenuAdmins = [
     },
     {
         key: '7',
-        label: 'Quản lý phúc khảo',
-        path: 'reviewmanagement',
+        label: 'Quản lý học kỳ',
+        path: 'addsemester',
+        icon: <DesktopOutlined />,
+    },
+    {
+        key: '9',
+        label: 'Quản lý khóa học',
+        path: 'addcourse',
+        icon: <DesktopOutlined />,
+    },
+    {
+        key: '10',
+        label: 'Quản lý chuyên ngành',
+        path: 'addmajor',
         icon: <DesktopOutlined />,
     },
 ];
