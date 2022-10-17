@@ -29,7 +29,7 @@ function ProfilePersonal() {
                                         </div>
                                     </div>
                                     <div className={cx('profile__widget--body')}>
-                                        <div className={cx('profile__widget--content')}>
+                                        <div className={cx('profile__widget--content--user')}>
                                             <div className={cx('profile__widget--info')}>
                                                 <span className={cx('profile__widget--label')}>Email:</span>
                                                 <a href="#" className={cx('profile__widget--data')}>
@@ -37,7 +37,14 @@ function ProfilePersonal() {
                                                 </a>
                                             </div>
                                         </div>
-                                        <div className={cx('profile__widget--items')}></div>
+                                        <div className={cx('profile__widget--items')}>
+                                            <a href="#" className={cx('profile__widget--active')}>
+                                                <span className={cx('profile__widget--section')}>
+                                                    <span className={cx('profile__widget--icon')}></span>
+                                                    <span className={cx('profile__widget--desc')}>Hồ sơ cá nhân</span>
+                                                </span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -47,20 +54,31 @@ function ProfilePersonal() {
                                 <div className={cx('portlet__head-label')}>
                                     <h3 className={cx('portlet__head-title')}>Thông tin cá nhân</h3>
                                 </div>
-                            </div>
-                            {/* <form className={cx('portlet__label-right')}>
-                                <div className={cx('portlet__body')}>
-                                    <div className={cx('portlet__section')}>
-                                        <div className={cx('row')}>
-                                            <div className={cx('c-3')}>
-                                                <div className={cx('c-12')}>
-                                                    <div className={cx('section__title')}>Thông tin cá nhân:</div>
+                                <form className={cx('form__label-right')}>
+                                    <div className={cx('profile__body')}>
+                                        <div className={cx('profile__widget--user')}>
+                                            <div className={cx('row')}>
+                                                <div className={cx('c-3')}></div>
+                                                <div className={cx('c-9')}>
+                                                    <div className={cx('profile__section--title--sm')}>
+                                                        Thông tin cá nhân:
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className={cx('form-group', 'row')}>
+                                                <label className={cx('col-form-label', 'c-3')}>Họ và tên</label>
+                                                <div className={cx('c-9')}>
+                                                    <input
+                                                        type="text"
+                                                        value="Trần Minh Đạt"
+                                                        className={cx('input-form__label')}
+                                                    />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </form> */}
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

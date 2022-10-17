@@ -18,11 +18,13 @@ import SubjectManagement from './admin/pages/SubjectManagement';
 import AccountManagement from './admin/pages/AccountManagement';
 import ClassManager from './admin/pages/ClassManager';
 import ReviewManagement from './admin/pages/ReviewManagement';
+import AuthLogin from './layouts/AuthLogin';
 
 function App() {
     return (
         <Router>
             <Routes>
+                <Route path="/login" element={<AuthLogin />} />
                 <Route path="/" element={<DashboardLayout />} />
                 <Route path="/student" element={<DefaultLayout />}>
                     <Route path="" element={<Notification />} />

@@ -75,20 +75,14 @@ const SidebarAdmin = () => {
     };
 
     return (
-        <Layout
-            style={{
-                minHeight: '100vh',
-                backgroundColor: '#fff',
-            }}
-        >
-            <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-                <div className="logo" />
-                <Menu theme="dark" items={MenuAdmins} mode="inline" onClick={onClickMenu}>
-                    {MenuAdmins.map((item) => (
-                        <Menu.Item key={item.key}>{item.label}</Menu.Item>
-                    ))}
-                </Menu>
-                {/* {MenuAdmins.map((data, index) => {
+        <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+            <div className="logo" />
+            <Menu theme="dark" items={MenuAdmins} mode="inline" onClick={onClickMenu}>
+                {MenuAdmins.map((item) => (
+                    <Menu.Item key={item.key}>{item.label}</Menu.Item>
+                ))}
+            </Menu>
+            {/* {MenuAdmins.map((data, index) => {
                         return (
                             <Menu.Item key={index}>
                                 {data?.icon}
@@ -99,8 +93,7 @@ const SidebarAdmin = () => {
                         );
                     })}
                 </Menu> */}
-            </Sider>
-        </Layout>
+        </Sider>
     );
 };
 

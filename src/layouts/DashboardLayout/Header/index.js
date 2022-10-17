@@ -1,12 +1,19 @@
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import style from './Header.module.scss';
-import { isLogin } from '~/service/constant';
-import { HandleLogin } from '~/service';
-
+import TokenLogin from '~/layouts/components/Token';
+import AuthLogin from '~/layouts/AuthLogin';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 const cx = classNames.bind(style);
-
 function Header() {
+    const [token, setToken] = useState();
+    const navigate = useNavigate();
+    const handleLog = () => {
+        if (!token) {
+            return <AuthLogin setToken={setToken} />;
+        }
+    };
     return (
         <div className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -19,12 +26,12 @@ function Header() {
                 <div className={cx('navbar')}>
                     <ul className={cx('navbar__list')}>
                         <li className={cx('navbar__item')}>
-                            <Link to={HandleLogin() ? '/student' : '/login'} className={cx('navbar__link')}>
+                            <Link to={handleLog ? '/student' : 'login'} className={cx('navbar__link')}>
                                 Sinh viên
                             </Link>
                         </li>
                         <li className={cx('navbar__item')}>
-                            <Link to={HandleLogin() ? '/lecturers' : '/login'} className={cx('navbar__link')}>
+                            <Link to={'/lecturers'} className={cx('navbar__link')}>
                                 Giảng viên
                             </Link>
                         </li>

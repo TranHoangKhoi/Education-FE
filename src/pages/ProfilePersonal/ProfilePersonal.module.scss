@@ -57,7 +57,6 @@
             color: #74788d;
         }
     }
-
     .profile__widget--username {
         font-weight: 500;
         font-size: 1.3em;
@@ -107,5 +106,45 @@
         border-bottom: 1px solid #ebedf2;
     }
 }
-.profile__widget--content {
+
+.profile__widget--content--user {
+    padding: 1.9rem 0 2.1rem;
+}
+.profile__widget--info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+}
+.profile__widget--active {
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    background: #f2f3f7;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.9rem 1.05rem 0.9rem 0.6rem;
+    margin: 0.4rem 0;
+}
+.form-group {
+    padding: 1.5rem 0;
+    .input-form__label {
+        width: 50%;
+        background: #3333;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+    }
+    .col-form-label {
+        padding: 0.5rem 1.5rem 0;
+        text-align: right;
+    }
 }
