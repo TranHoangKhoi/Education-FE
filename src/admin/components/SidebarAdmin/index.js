@@ -26,6 +26,32 @@ const MenuAdmins = [
         label: 'Quản lý thông báo',
         path: 'managenotifications',
         icon: <DesktopOutlined />,
+        children: [
+            {
+                key: '20',
+                label: 'Thêm',
+                path: 'addnotifications',
+                icon: <DesktopOutlined />,
+            },
+            // {
+            //     key: '21',
+            //     label: 'Sửa',
+            //     path: 'listnotifications',
+            //     icon: <DesktopOutlined />,
+            // },
+            // {
+            //     key: '22',
+            //     label: 'Xóa',
+            //     path: 'updatenotifications',
+            //     icon: <DesktopOutlined />,
+            // },
+        ],
+    },
+    {
+        key: '8',
+        label: 'Quản lý loại thông báo',
+        path: 'manageCategoryNotifications',
+        icon: <DesktopOutlined />,
     },
     {
         key: '3',
@@ -53,8 +79,20 @@ const MenuAdmins = [
     },
     {
         key: '7',
-        label: 'Quản lý phúc khảo',
-        path: 'reviewmanagement',
+        label: 'Quản lý học kỳ',
+        path: 'addsemester',
+        icon: <DesktopOutlined />,
+    },
+    {
+        key: '9',
+        label: 'Quản lý khóa học',
+        path: 'addcourse',
+        icon: <DesktopOutlined />,
+    },
+    {
+        key: '10',
+        label: 'Quản lý chuyên ngành',
+        path: 'addmajor',
         icon: <DesktopOutlined />,
     },
 ];
@@ -69,9 +107,23 @@ const SidebarAdmin = () => {
     const [collapsed, setCollapsed] = useState(false);
     const navigate = useNavigate();
     const onClickMenu = (item) => {
-        const clicked = MenuAdmins.find((_item) => _item.key === item.key);
-        console.log('clicked', clicked);
-        navigate(clicked.path);
+        var itemClick = {};
+        const clicked = MenuAdmins.find((_item) => {
+            if (_item.key === item.key) {
+                itemClick = _item;
+            }
+            _item.children?.find((itemChild) => {
+                if (itemChild.key === item.key) {
+                    const path = _item.path + '/' + itemChild.path;
+                    console.log('tam', path);
+                    itemClick = {
+                        key: itemChild.key,
+                        path: path,
+                    };
+                }
+            });
+        });
+        navigate(itemClick.path);
     };
 
     return (
