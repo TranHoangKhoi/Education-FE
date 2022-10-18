@@ -11,35 +11,72 @@ import ProfilePersonal from './pages/ProfilePersonal';
 import Lecturers from './layouts/Lecturers';
 import Scoreup from './pages/Scoreup';
 import DefaultLayoutAdmin from './admin/pages/DefaultLayoutAdmin';
+// start point
 import PointManagement from './admin/pages/PointManagement';
+import ListPoint from './admin/pages/PointManagement/ListPoint';
+import UpdatePoint from './admin/pages/PointManagement/UpdatePoint';
+// end point
+
+// start Notifications
 import ManageNotifications from './admin/pages/ManageNotifications';
-// import ContactInformation from './admin/pages/ContactInformation';
-import { AddContact, ListContact, UpdateContact } from './admin/pages/ContactInformation';
+import AddNotifications from './admin/pages/ManageNotifications/AddNotifications';
+import ListNotifications from './admin/pages/ManageNotifications/ListNotifications';
+import UpdateNotifications from './admin/pages/ManageNotifications/UpdateNotifications';
+// end Notifications
+
+// start contact
+import ContactInformation from './admin/pages/ContactInformation';
+import AddContact from './admin/pages/ContactInformation/AddContact';
+import ListContact from './admin/pages/ContactInformation/ListContact';
+import UpdateContact from './admin/pages/ContactInformation/UpdateContact';
+// end contact
+
 import SubjectManagement from './admin/pages/SubjectManagement';
+
+// start account
 import AccountManagement from './admin/pages/AccountManagement';
+import ListAccount from './admin/pages/AccountManagement/ListAccount';
+import UpdateAccount from './admin/pages/AccountManagement/UpdateAccount';
+//end account
+
 // import ClassManager from './admin/pages/ClassManager';
 import ReviewManagement from './admin/pages/ReviewManagement';
 import Login from './layouts/Login';
-import ManageCategoryNotifications from './admin/pages/ManageCategoryNotifications';
 
 //classmanager
 import { AddClass, ListClass } from './admin/pages/ClassManager';
-//ategoryNotifications
-import {
-    AddCategoryNotifications,
-    ListCategoryNotifications,
-    UpdateCategoryNotifications,
-} from './admin/pages/ManageCategoryNotifications';
-// managerment Semester (học kì)
-import { AddSemester, ListSemester, UpdateSemester } from './admin/pages/ManageSemester';
 
-//managerment Course(Khóa học)
-import { AddCourse, ListCourse, UpdateCourse } from './admin/pages/ManageCourse';
-// managerment Major (chuyên ngành)
-import { AddMajor, ListMajor, UpdateMajor } from './admin/pages/ManageMajor';
-import AddNotifications from './admin/pages/ManageNotifications/AddNotifications';
+// start categoryNotifications
+import ManageCategoryNotifications from './admin/pages/ManageCategoryNotifications';
+import AddCategoryNotifications from './admin/pages/ManageCategoryNotifications/AddCategoryNotifications';
+import ListCategoryNotifications from './admin/pages/ManageCategoryNotifications/ListCategoryNotifications';
+import UpdateCategoryNotifications from './admin/pages/ManageCategoryNotifications/UpdateCategoryNotifications';
+// end categoryNotifications
 
-function App() {
+// start managerment Semester (học kì)
+import ManagerSemester from './admin/pages/ManageSemester';
+import AddSemester from './admin/pages/ManageSemester/AddSemester';
+import ListSemester from './admin/pages/ManageSemester/ListSemester';
+import UpdateSemester from './admin/pages/ManageSemester/UpdateSemester';
+// end managerment Semester (học kì)
+
+// start managerment Course(Khóa học)
+import ManageCourse from './admin/pages/ManageCourse';
+import AddCourse from './admin/pages/ManageCourse/AddCourse';
+import ListCourse from './admin/pages/ManageCourse/ListCourse';
+import UpdateCourse from './admin/pages/ManageCourse/UpdateCourse';
+// end managerment Course(Khóa học)
+
+// start managerment Major (chuyên ngành)
+import ManageMajor from './admin/pages/ManageMajor';
+import AddMajor from './admin/pages/ManageMajor/AddMajor';
+import ListMajor from './admin/pages/ManageMajor/ListMajor';
+import UpdateMajor from './admin/pages/ManageMajor/UpdateMajor';
+// end managerment Major (chuyên ngành)
+
+
+function App()
+{
     return (
         <Router>
             <Routes>
@@ -60,56 +97,77 @@ function App() {
                 </Route>
 
                 <Route path="/admin" element={<DefaultLayoutAdmin />}>
-                    <Route path="pointmanagement" element={<PointManagement />} />
+                    <Route path="pointmanagement" element={<PointManagement />} >
+                        <Route path="listpoint" element={<ListPoint />} />
+                        <Route path="updatepoint" element={<UpdatePoint />} />
+
+
+                    </Route>
 
                     {/* start notifications */}
                     <Route path="managenotifications" element={<ManageNotifications />}>
                         <Route path="addnotifications" element={<AddNotifications />} />
+                        <Route path="listnotifications" element={<ListNotifications />} />
+                        <Route path="updatenotifications" element={<UpdateNotifications />} />
+
                     </Route>
                     {/* <Route path="listnotifications" element={<ListNotifications />} />
                         <Route path="updatenotifications" element={<UpdateNotifications />} /> */}
                     {/* End notifications */}
 
                     {/* -----start contact------ */}
-                    {/* <Route path="contactinformation" element={<ContactInformation />} /> */}
-                    <Route path="addcontact" element={<AddContact />} />
-                    <Route path="listcontact" element={<ListContact />} />
-                    <Route path="updatecontact" element={<UpdateContact />} />
+                    <Route path="contactinformation" element={<ContactInformation />} >
+                        <Route path="addcontact" element={<AddContact />} />
+                        <Route path="listcontact" element={<ListContact />} />
+                        <Route path="updatecontact" element={<UpdateContact />} />
+                    </Route>
                     {/*---- end contact -----*/}
                     <Route path="subjectmanagement" element={<SubjectManagement />} />
-                    <Route path="accountmanagement" element={<AccountManagement />} />
+                    {/* start account */}
+                    <Route path="accountmanagement" element={<AccountManagement />} >
+                        <Route path="listaccount" element={<ListAccount />} />
+                    </Route>
+
+                    {/* end account */}
                     {/* <Route path="classmanager" element={<ClassManager />} /> */}
                     <Route path="addclass" element={<AddClass />} />
                     <Route path="listclass" element={<ListClass />} />
 
                     <Route path="reviewmanagement" element={<ReviewManagement />} />
                     {/* start loại thông tin  */}
-                    {/* <Route path="manageCategoryNotifications" element={<ManageCategoryNotifications />}/> */}
-                    <Route path="addcatenotifications" element={<AddCategoryNotifications />} />
-                    <Route path="listcatenotifications" element={<ListCategoryNotifications />} />
-                    <Route path="updatecatenotifications" element={<UpdateCategoryNotifications />} />
+                    <Route path="manageCategoryNotifications" element={<ManageCategoryNotifications />}>
+                        <Route path="addcatenotifications" element={<AddCategoryNotifications />} />
+                        <Route path="listcatenotifications" element={<ListCategoryNotifications />} />
+                        <Route path="updatecatenotifications" element={<UpdateCategoryNotifications />} />
+                    </Route>
                     {/* end cate thông tin */}
 
                     {/* ---start Semester ---*/}
-                    <Route path="addsemester" element={<AddSemester />} />
-                    <Route path="listsemester" element={<ListSemester />} />
-                    <Route path="updatesemester" element={<UpdateSemester />} />
+                    <Route path="managesemeter" element={<ManagerSemester />} >
+                        <Route path="addsemester" element={<AddSemester />} />
+                        <Route path="listsemester" element={<ListSemester />} />
+                        <Route path="updatesemester" element={<UpdateSemester />} />
+                    </Route>
                     {/* End Semester */}
 
                     {/* ---start course ---*/}
-                    <Route path="addcourse" element={<AddCourse />} />
-                    <Route path="listcourse" element={<ListCourse />} />
-                    <Route path="updatecourse" element={<UpdateCourse />} />
+                    <Route path="managecourse" element={<ManageCourse />} >
+                        <Route path="addcourse" element={<AddCourse />} />
+                        <Route path="listcourse" element={<ListCourse />} />
+                        <Route path="updatecourse" element={<UpdateCourse />} />
+                    </Route>
                     {/* end course */}
 
                     {/* ---start Major ---*/}
-                    <Route path="addmajor" element={<AddMajor />} />
-                    <Route path="listmajor" element={<ListMajor />} />
-                    <Route path="updatemajor" element={<UpdateMajor />} />
+                    <Route path="managemajor" element={<ManageMajor />} >
+                        <Route path="addmajor" element={<AddMajor />} />
+                        <Route path="listmajor" element={<ListMajor />} />
+                        <Route path="updatemajor" element={<UpdateMajor />} />
+                    </Route>
                     {/* end Major */}
                 </Route>
             </Routes>
-        </Router>
+        </Router >
     );
 }
 

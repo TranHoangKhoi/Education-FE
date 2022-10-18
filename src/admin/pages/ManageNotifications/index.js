@@ -1,10 +1,10 @@
 // export { default as AddNotifications } from './AddNotifications';
 // export { default as ListNotifications } from './ListNotifications';
-
+// export { default as UpdateNotifications } from './UpdateNotifications';
 import { Outlet } from 'react-router-dom';
 
-// export { default as UpdateNotifications } from './UpdateNotifications';
-function ManageNotifications() {
+function ManageNotifications()
+{
     return (
         <div>
             <Outlet />

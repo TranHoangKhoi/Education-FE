@@ -20,6 +20,20 @@ const MenuAdmins = [
         label: 'Quản lý điểm',
         path: 'pointmanagement',
         icon: <DesktopOutlined />,
+        children: [
+            {
+                key: '15',
+                label: 'Danh sách điểm',
+                path: 'listpoint',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '16',
+                label: 'Cập nhật điểm',
+                path: 'updatepoint',
+                icon: <DesktopOutlined />,
+            },
+        ]
     },
     {
         key: '2',
@@ -29,22 +43,22 @@ const MenuAdmins = [
         children: [
             {
                 key: '20',
-                label: 'Thêm',
+                label: 'Thêm Thông báo',
                 path: 'addnotifications',
                 icon: <DesktopOutlined />,
             },
-            // {
-            //     key: '21',
-            //     label: 'Sửa',
-            //     path: 'listnotifications',
-            //     icon: <DesktopOutlined />,
-            // },
-            // {
-            //     key: '22',
-            //     label: 'Xóa',
-            //     path: 'updatenotifications',
-            //     icon: <DesktopOutlined />,
-            // },
+            {
+                key: '21',
+                label: 'Danh sách ',
+                path: 'listnotifications',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '22',
+                label: 'Sửa',
+                path: 'updatenotifications',
+                icon: <DesktopOutlined />,
+            },
         ],
     },
     {
@@ -52,12 +66,54 @@ const MenuAdmins = [
         label: 'Quản lý loại thông báo',
         path: 'manageCategoryNotifications',
         icon: <DesktopOutlined />,
+        children: [
+
+            {
+                key: '80',
+                label: 'Thêm loại Thông báo',
+                path: 'addcatenotifications',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '81',
+                label: 'Danh sách loại Thông báo ',
+                path: 'listcatenotifications',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '82',
+                label: 'Sửa',
+                path: 'updatecatenotifications',
+                icon: <DesktopOutlined />,
+            },
+
+        ]
     },
     {
         key: '3',
         label: 'Quản lý thông tin liên hệ',
         path: 'contactinformation',
         icon: <DesktopOutlined />,
+        children: [
+            {
+                key: '30',
+                label: 'Thêm liên hệ ',
+                path: 'addcontact',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '31',
+                label: 'Danh sách liên lệ ',
+                path: 'listcontact',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '32',
+                label: 'Sửa liên hệ',
+                path: 'updatecontact',
+                icon: <DesktopOutlined />,
+            },
+        ]
     },
     {
         key: '4',
@@ -70,6 +126,27 @@ const MenuAdmins = [
         label: 'Quản lý tài khoản',
         path: 'accountmanagement',
         icon: <DesktopOutlined />,
+        children: [
+            // {
+            //     key: '50',
+            //     label: 'Thêm liên hệ ',
+            //     path: 'addcontact',
+            //     icon: <DesktopOutlined />,
+            // },
+            {
+                key: '51',
+                label: 'Danh sách tài khoản ',
+                path: 'listaccount',
+                icon: <DesktopOutlined />,
+            },
+            // {
+            //     key: '52',
+            //     label: 'Sửa liên hệ',
+            //     path: 'updatecontact',
+            //     icon: <DesktopOutlined />,
+            // },
+        ]
+
     },
     {
         key: '6',
@@ -80,20 +157,81 @@ const MenuAdmins = [
     {
         key: '7',
         label: 'Quản lý học kỳ',
-        path: 'addsemester',
+        path: 'managesemeter',
         icon: <DesktopOutlined />,
+        children: [
+            {
+                key: '70',
+                label: 'Thêm học kỳ ',
+                path: 'addsemester',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '71',
+                label: 'Danh sách học kỳ ',
+                path: 'listsemester',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '72',
+                label: 'Sửa học kỳ',
+                path: 'updatesemester',
+                icon: <DesktopOutlined />,
+            },
+        ]
     },
     {
         key: '9',
         label: 'Quản lý khóa học',
-        path: 'addcourse',
+        path: 'managecourse',
         icon: <DesktopOutlined />,
+        children: [
+            {
+                key: '90',
+                label: 'Thêm khóa học ',
+                path: 'addcourse',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '91',
+                label: 'Danh sách khóa học ',
+                path: 'listcourse',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '92',
+                label: 'Sửa khóa học',
+                path: 'updatecourse',
+                icon: <DesktopOutlined />,
+            },
+        ]
+
     },
     {
         key: '10',
         label: 'Quản lý chuyên ngành',
-        path: 'addmajor',
+        path: 'managemajor',
         icon: <DesktopOutlined />,
+        children: [
+            {
+                key: '101',
+                label: 'Thêm chuyên ngành ',
+                path: 'addmajor',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '102',
+                label: 'Danh sách chuyên ngành ',
+                path: 'listmajor',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '103',
+                label: 'Sửa chuyên ngành',
+                path: 'updatemajor',
+                icon: <DesktopOutlined />,
+            },
+        ]
     },
 ];
 // const dataNEw = MenuAdmins.map((item, index) => {
@@ -103,17 +241,23 @@ const MenuAdmins = [
 //     };
 // });
 // console.log(dataNEw);
-const SidebarAdmin = () => {
+const SidebarAdmin = () =>
+{
     const [collapsed, setCollapsed] = useState(false);
     const navigate = useNavigate();
-    const onClickMenu = (item) => {
+    const onClickMenu = (item) =>
+    {
         var itemClick = {};
-        const clicked = MenuAdmins.find((_item) => {
-            if (_item.key === item.key) {
+        const clicked = MenuAdmins.find((_item) =>
+        {
+            if (_item.key === item.key)
+            {
                 itemClick = _item;
             }
-            _item.children?.find((itemChild) => {
-                if (itemChild.key === item.key) {
+            _item.children?.find((itemChild) =>
+            {
+                if (itemChild.key === item.key)
+                {
                     const path = _item.path + '/' + itemChild.path;
                     console.log('tam', path);
                     itemClick = {

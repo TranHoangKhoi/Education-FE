@@ -1,3 +1,11 @@
-export { default as AddContact } from './AddContact';
-export { default as ListContact } from './ListContact';
-export { default as UpdateContact } from './UpdateContact';
+import { Outlet } from 'react-router-dom';
+function ContactInformation()
+{
+    return (
+        <div>
+            <Outlet />
+        </div>
+    );
+}
+
+export default ContactInformation;
