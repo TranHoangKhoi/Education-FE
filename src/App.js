@@ -63,9 +63,8 @@ function App() {
                     <Route path="pointmanagement" element={<PointManagement />} />
 
                     {/* start notifications */}
-                    <Route path="managenotifications" element={<ManageNotifications />}>
-                        <Route path="addnotifications" element={<AddNotifications />} />
-                    </Route>
+                    <Route path="managenotifications" element={<ManageNotifications />} />
+                    <Route path="addnotifications" element={<AddNotifications />} />
                     {/* <Route path="listnotifications" element={<ListNotifications />} />
                         <Route path="updatenotifications" element={<UpdateNotifications />} /> */}
                     {/* End notifications */}

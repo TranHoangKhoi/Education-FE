@@ -2,24 +2,36 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import className from 'classnames/bind';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import styles from './AuthLogin.module.scss';
 const cx = className.bind(styles);
 export default function Login() {
     const [authlogin, setAuthLogin] = useState(false);
     const navigate = useNavigate();
-    const [username, setUsername] = useState('');
+    const [email, setUserEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [authenticated, setAuthenticated] = useState(
-        localStorage.getItem(localStorage.getItem('authenticated') || false),
-    );
-    const users = [{ username: 'admin', password: 'admin' }];
     const handleSubmit = (e) => {
         e.preventDefault();
-        const account = users.find((user) => user.username === username);
-        if (account && account.password === password) {
-            localStorage.setItem('authenticated', true);
-            navigate('/student');
-        }
+        console.log({ setUserEmail, password });
+        axios
+            .post('https://reqres.in/api/login', {
+                email: email,
+                password: password,
+            })
+            .then((response) => {
+                console.log(response.data);
+                alert('Success');
+                localStorage.setItem('token', response.data.token);
+                navigate('/student');
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        // const account = users.find((user) => user.username === username);
+        // if (account && account.password === password) {
+        //     localStorage.setItem('authenticated', true);
+        //     navigate('/student');
+        // }
     };
     const handleLoginRegister = () => {
         setAuthLogin(!authlogin);
@@ -73,28 +85,25 @@ export default function Login() {
                     </div>
                     <div className="form-group mt-3">
                         <label>Email address</label>
-                        {/* <input
+                        <input
                             type="email"
                             className="form-control mt-1"
                             placeholder="Enter email"
-                            onChange={(e) => setUsername(e.target.value)}
-                        /> */}
-                        <input
-                            type="text"
-                            name="Username"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
+                            name="email"
+                            value={email}
+                            onChange={(e) => setUserEmail(e.target.value)}
                         />
                     </div>
                     <div className="form-group mt-3">
                         <label>Password</label>
-                        {/* <input
+                        <input
                             type="password"
                             className="form-control mt-1"
                             placeholder="Enter password"
+                            name="Password"
+                            value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                        /> */}
-                        <input type="password" name="Password" onChange={(e) => setPassword(e.target.value)} />
+                        />
                     </div>
                     <div className="d-grid gap-2 mt-3">
                         <button type="submit" className="btn btn-primary">
