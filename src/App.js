@@ -31,12 +31,21 @@ import ListContact from './admin/pages/ContactInformation/ListContact';
 import UpdateContact from './admin/pages/ContactInformation/UpdateContact';
 // end contact
 
+//start address
+import ManageAddress from './admin/pages/ManageAddress';
+import AddAddress from './admin/pages/ManageAddress/AddAddress';
+import ListAddress from './admin/pages/ManageAddress/ListAddress';
+import UpdateAddress from './admin/pages/ManageAddress/UpdateAddress';
+//end address
+
 import SubjectManagement from './admin/pages/SubjectManagement';
 
 // start account
 import AccountManagement from './admin/pages/AccountManagement';
 import ListAccount from './admin/pages/AccountManagement/ListAccount';
 import UpdateAccount from './admin/pages/AccountManagement/UpdateAccount';
+import AddAccount from './admin/pages/AccountManagement/AddAccount';
+
 //end account
 
 // import ClassManager from './admin/pages/ClassManager';
@@ -122,10 +131,21 @@ function App()
                         <Route path="updatecontact" element={<UpdateContact />} />
                     </Route>
                     {/*---- end contact -----*/}
+
+                    {/* start address */}
+                    <Route path="manageaddress" element={<ManageAddress />} >
+                        <Route path="addaddress" element={<AddAddress />} />
+                        <Route path="listaddress" element={<ListAddress />} />
+                        <Route path="updateaddress" element={<UpdateAddress />} />
+                    </Route>
+                    {/* end address */}
+
                     <Route path="subjectmanagement" element={<SubjectManagement />} />
                     {/* start account */}
                     <Route path="accountmanagement" element={<AccountManagement />} >
+                        <Route path="addaccount" element={<AddAccount />} />
                         <Route path="listaccount" element={<ListAccount />} />
+                        <Route path="updateaccount" element={<UpdateAccount />} />
                     </Route>
 
                     {/* end account */}
