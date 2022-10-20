@@ -120,6 +120,27 @@ const MenuAdmins = [
         label: 'Quản lý môn học',
         path: 'subjectmanagement',
         icon: <DesktopOutlined />,
+        children:[
+            {
+                key: '40',
+                label: 'Thêm môn học',
+                path: 'addsubject',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '41',
+                label: 'Danh sách môn học',
+                path: 'listsubject',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '42',
+                label: 'Cập nhật môn học',
+                path: 'updatesubject',
+                icon: <DesktopOutlined />,
+            }
+
+        ]
     },
     {
         key: '5',
@@ -153,6 +174,27 @@ const MenuAdmins = [
         label: 'Quản lý lớp',
         path: 'classmanager',
         icon: <DesktopOutlined />,
+        children:[
+            {
+                key: '61',
+                label: 'Thêm lớp ',
+                path: 'addclass',
+                icon: <DesktopOutlined />,
+            }
+            ,{
+                key: '62',
+                label: 'Danh sách lớp ',
+                path: 'listclass',
+                icon: <DesktopOutlined />,
+            }
+            ,{
+                key: '63',
+                label: 'Cập nhật  lớp ',
+                path: 'updateclass',
+                icon: <DesktopOutlined />,
+            }
+
+        ]
     },
     {
         key: '7',

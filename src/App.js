@@ -31,7 +31,12 @@ import ListContact from './admin/pages/ContactInformation/ListContact';
 import UpdateContact from './admin/pages/ContactInformation/UpdateContact';
 // end contact
 
+// start subject
 import SubjectManagement from './admin/pages/SubjectManagement';
+import AddSubjet from './admin/pages/SubjectManagement/AddSubject';
+import UpdateSubject from './admin/pages/SubjectManagement/UpdateSubject';
+import ListSubject from './admin/pages/SubjectManagement/ListSubject';
+// endsubject
 
 // start account
 import AccountManagement from './admin/pages/AccountManagement';
@@ -44,8 +49,10 @@ import ReviewManagement from './admin/pages/ReviewManagement';
 import Login from './layouts/Login';
 
 //classmanager
-import { AddClass, ListClass } from './admin/pages/ClassManager';
-
+import ClassManager from './admin/pages/ClassManager';
+import ListClass from './admin/pages/ClassManager/ListClass';
+import UpdateClass from './admin/pages/ClassManager/UpdateClass';
+import AddClass from './admin/pages/ClassManager/AddClass';
 // start categoryNotifications
 import ManageCategoryNotifications from './admin/pages/ManageCategoryNotifications';
 import AddCategoryNotifications from './admin/pages/ManageCategoryNotifications/AddCategoryNotifications';
@@ -122,16 +129,26 @@ function App()
                         <Route path="updatecontact" element={<UpdateContact />} />
                     </Route>
                     {/*---- end contact -----*/}
-                    <Route path="subjectmanagement" element={<SubjectManagement />} />
+                    <Route path="subjectmanagement" element={<SubjectManagement />} >
+                        <Route path="addsubject" element={<AddSubjet />} />
+                        <Route path="updatesubject" element={<UpdateSubject />}/>
+                        <Route path="listsubject" element={<ListSubject />} />
+                    </Route>
                     {/* start account */}
                     <Route path="accountmanagement" element={<AccountManagement />} >
                         <Route path="listaccount" element={<ListAccount />} />
                     </Route>
 
                     {/* end account */}
-                    {/* <Route path="classmanager" element={<ClassManager />} /> */}
+
+                    {/* start class */}
+                    <Route path="classmanager" element={<ClassManager />} >
                     <Route path="addclass" element={<AddClass />} />
                     <Route path="listclass" element={<ListClass />} />
+                    <Route path="updateclass" element={<UpdateClass />} />
+                    </Route>   
+                        {/* endclass */}
+
 
                     <Route path="reviewmanagement" element={<ReviewManagement />} />
                     {/* start loại thông tin  */}

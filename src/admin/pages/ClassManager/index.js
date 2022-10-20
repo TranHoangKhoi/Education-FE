@@ -1,3 +1,13 @@
-export { default as AddClass } from './AddClass'
-export { default as ListClass } from './ListClass'
+import { Outlet } from "react-router-dom";
 
+
+
+function ClassManager() {
+    return ( 
+    <div>
+        <Outlet/>
+    </div> 
+    );
+}
+
+export default  ClassManager;
