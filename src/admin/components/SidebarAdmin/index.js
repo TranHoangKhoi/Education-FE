@@ -148,24 +148,24 @@ const MenuAdmins = [
         path: 'accountmanagement',
         icon: <DesktopOutlined />,
         children: [
-            // {
-            //     key: '50',
-            //     label: 'Thêm liên hệ ',
-            //     path: 'addcontact',
-            //     icon: <DesktopOutlined />,
-            // },
+            {
+                key: '50',
+                label: 'Thêm tài khoản ',
+                path: 'addaccount',
+                icon: <DesktopOutlined />,
+            },
             {
                 key: '51',
                 label: 'Danh sách tài khoản ',
                 path: 'listaccount',
                 icon: <DesktopOutlined />,
             },
-            // {
-            //     key: '52',
-            //     label: 'Sửa liên hệ',
-            //     path: 'updatecontact',
-            //     icon: <DesktopOutlined />,
-            // },
+            {
+                key: '52',
+                label: 'Sửa tài khoản',
+                path: 'updateaccount',
+                icon: <DesktopOutlined />,
+            },
         ]
 
     },
@@ -271,6 +271,32 @@ const MenuAdmins = [
                 key: '103',
                 label: 'Sửa chuyên ngành',
                 path: 'updatemajor',
+                icon: <DesktopOutlined />,
+            },
+        ]
+    },
+    {
+        key: '11',
+        label: 'Quản lý địa chỉ',
+        path: 'manageaddress',
+        icon: <DesktopOutlined />,
+        children: [
+            {
+                key: '110',
+                label: 'Thêm địa chỉ ',
+                path: 'addaddress',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '111',
+                label: 'Danh sách địa chỉ ',
+                path: 'listaddress',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '112',
+                label: 'Sửa địa chỉ',
+                path: 'updateaddress',
                 icon: <DesktopOutlined />,
             },
         ]

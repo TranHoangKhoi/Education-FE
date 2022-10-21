@@ -31,7 +31,17 @@ import ListContact from './admin/pages/ContactInformation/ListContact';
 import UpdateContact from './admin/pages/ContactInformation/UpdateContact';
 // end contact
 
+<<<<<<< HEAD
 // start subject
+=======
+//start address
+import ManageAddress from './admin/pages/ManageAddress';
+import AddAddress from './admin/pages/ManageAddress/AddAddress';
+import ListAddress from './admin/pages/ManageAddress/ListAddress';
+import UpdateAddress from './admin/pages/ManageAddress/UpdateAddress';
+//end address
+
+>>>>>>> 784885bf6880f92dbfe34fa1c5c231c51a4b433f
 import SubjectManagement from './admin/pages/SubjectManagement';
 import AddSubjet from './admin/pages/SubjectManagement/AddSubject';
 import UpdateSubject from './admin/pages/SubjectManagement/UpdateSubject';
@@ -42,6 +52,8 @@ import ListSubject from './admin/pages/SubjectManagement/ListSubject';
 import AccountManagement from './admin/pages/AccountManagement';
 import ListAccount from './admin/pages/AccountManagement/ListAccount';
 import UpdateAccount from './admin/pages/AccountManagement/UpdateAccount';
+import AddAccount from './admin/pages/AccountManagement/AddAccount';
+
 //end account
 
 // import ClassManager from './admin/pages/ClassManager';
@@ -129,14 +141,29 @@ function App()
                         <Route path="updatecontact" element={<UpdateContact />} />
                     </Route>
                     {/*---- end contact -----*/}
+<<<<<<< HEAD
                     <Route path="subjectmanagement" element={<SubjectManagement />} >
                         <Route path="addsubject" element={<AddSubjet />} />
                         <Route path="updatesubject" element={<UpdateSubject />}/>
                         <Route path="listsubject" element={<ListSubject />} />
                     </Route>
+=======
+
+                    {/* start address */}
+                    <Route path="manageaddress" element={<ManageAddress />} >
+                        <Route path="addaddress" element={<AddAddress />} />
+                        <Route path="listaddress" element={<ListAddress />} />
+                        <Route path="updateaddress" element={<UpdateAddress />} />
+                    </Route>
+                    {/* end address */}
+
+                    <Route path="subjectmanagement" element={<SubjectManagement />} />
+>>>>>>> 784885bf6880f92dbfe34fa1c5c231c51a4b433f
                     {/* start account */}
                     <Route path="accountmanagement" element={<AccountManagement />} >
+                        <Route path="addaccount" element={<AddAccount />} />
                         <Route path="listaccount" element={<ListAccount />} />
+                        <Route path="updateaccount" element={<UpdateAccount />} />
                     </Route>
 
                     {/* end account */}
