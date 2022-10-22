@@ -15,8 +15,7 @@ const menuItems = [
         to: 'viewscoreboard',
     },
 ];
-function Lecturer()
-{
+function Lecturer() {
     return (
         <Layout>
             <div className={cx('wrapper')}>

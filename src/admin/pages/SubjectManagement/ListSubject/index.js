@@ -1,16 +1,13 @@
+import classNames from "classnames/bind";
+import styles from './listsubject.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDownZA, faArrowUpZA, faMagnifyingGlass, faTrashCan, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
-import classNames from "classnames/bind";
-import styles from './listclass.module.scss'
+import { Link, Route } from "react-router-dom";
 const cx = classNames.bind(styles)
-function ListClass()
-
-
-
-{
-    return (
+function ListSubject() {
+    return ( 
         <div className={cx('content')}>
-            <h1 className={cx('center')}>Danh sách lớp học</h1>
+            <h1 className={cx('center')}>Danh sách môn học</h1>
             <div className={cx('wrapper')}>
                 <div className={cx('table__wrapper')}>
                     <div className={cx('table__content')}>
@@ -29,7 +26,17 @@ function ListClass()
                                     </th>
                                     <th>
                                         <span className={cx('tbl__heading--item')}>
-                                            Tên lớp học
+                                            Môn học
+                                            <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
+                                            <FontAwesomeIcon
+                                                className={cx('tbl__arr--down')}
+                                                icon={faArrowDownZA}
+                                            />
+                                        </span>
+                                    </th>
+                                    <th>
+                                        <span className={cx('tbl__heading--item')}>
+                                            Chuyên nghành
                                             <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
                                             <FontAwesomeIcon
                                                 className={cx('tbl__arr--down')}
@@ -51,20 +58,27 @@ function ListClass()
                             <tbody>
                                 <tr>
                                     <td className={cx('text-center')}>1</td>
-                                    <td>16301</td>
+                                    <td>Lập trình c cơ bản</td>
+                                    <td>Công nghệ thông tin</td>
                                     <td>
                                         <FontAwesomeIcon className={cx('tbl__arr--dows', 'p-r')} icon={faTrashCan} />
+
                                         <FontAwesomeIcon className={cx('tbl__arr--ups', 'p-l')} icon={faPenToSquare} />
+
 
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td className={cx('text-center')}>2</td>
-                                    <td>17304</td>
+                                    <td>PTS AI</td>
+                                    <td>Đồ họa</td>
                                     <td>
                                         <FontAwesomeIcon className={cx('tbl__arr--dows', 'p-r')} icon={faTrashCan} />
-                                        <FontAwesomeIcon className={cx('tbl__arr--ups', 'p-l')} icon={faPenToSquare} />
+                                        <Link to="updatenotifications">
+                                            <FontAwesomeIcon className={cx('tbl__arr--ups', 'p-l')} icon={faPenToSquare} />
+                                        </Link>
+
                                     </td>
 
                                 </tr>
@@ -74,7 +88,7 @@ function ListClass()
                 </div>
             </div>
         </div>
-    );
+     );
 }
 
-export default ListClass;
+export default ListSubject ;
