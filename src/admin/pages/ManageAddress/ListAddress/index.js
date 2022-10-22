@@ -1,16 +1,14 @@
 import classNames from "classnames/bind";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDownZA, faArrowUpZA, faMagnifyingGlass, faTrashCan, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
-import styles from './ListNotifications.module.scss';
-import { Link, Route } from "react-router-dom";
-import UpdateNotifications from "../UpdateNotifications";
+import styles from './ListAddress.module.scss';
 
 const cx = classNames.bind(styles);
-function ListNotifications()
+function ListAddress()
 {
     return (
         <div className={cx('content')}>
-            <h1 className={cx('center')}>Danh sách loại tin</h1>
+            <h1 className={cx('center')}>Danh sách địa chỉ</h1>
             <div className={cx('wrapper')}>
                 <div className={cx('table__wrapper')}>
                     <div className={cx('table__content')}>
@@ -20,6 +18,12 @@ function ListNotifications()
                                     <th>
                                         <span className={cx('tbl__heading--item')}>
                                             #
+
+                                        </span>
+                                    </th>
+                                    <th>
+                                        <span className={cx('tbl__heading--item')}>
+                                            Tên cơ sở
                                             <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
                                             <FontAwesomeIcon
                                                 className={cx('tbl__arr--down')}
@@ -29,7 +33,7 @@ function ListNotifications()
                                     </th>
                                     <th>
                                         <span className={cx('tbl__heading--item')}>
-                                            Tiêu đề
+                                            Địa chỉ
                                             <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
                                             <FontAwesomeIcon
                                                 className={cx('tbl__arr--down')}
@@ -37,9 +41,10 @@ function ListNotifications()
                                             />
                                         </span>
                                     </th>
+
                                     <th>
                                         <span className={cx('tbl__heading--item')}>
-                                            Tóm tắt
+                                            Số điện thoại
                                             <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
                                             <FontAwesomeIcon
                                                 className={cx('tbl__arr--down')}
@@ -50,9 +55,7 @@ function ListNotifications()
                                     <th>
                                         <span className={cx('tbl__heading--item')}>
                                             Thao tác
-
                                         </span>
-
                                     </th>
 
                                 </tr>
@@ -61,27 +64,24 @@ function ListNotifications()
                             <tbody>
                                 <tr>
                                     <td className={cx('text-center')}>1</td>
-                                    <td>THÔNG BÁO THỜI GIAN TỔ CHỨC THI LẠI ĐỢT 1 - FALL 2022.</td>
-                                    <td>THÔNG BÁO THỜI GIAN TỔ</td>
+                                    <td>Cần thơ</td>
+                                    <td>Số 288, Nguyễn Văn Linh, phường An Khánh, quận Ninh Kiều, Tp. Cần Thơ.</td>
+                                    <td>(0292) 7300 468</td>
                                     <td>
                                         <FontAwesomeIcon className={cx('tbl__arr--dows', 'p-r')} icon={faTrashCan} />
-
                                         <FontAwesomeIcon className={cx('tbl__arr--ups', 'p-l')} icon={faPenToSquare} />
-
 
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td className={cx('text-center')}>2</td>
-                                    <td>THÔNG BÁO THỜI GIAN TỔ CHỨC THI LẠI ĐỢT 1 - FALL 2022.</td>
-                                    <td>THÔNG BÁO THỜI GIAN TỔ</td>
+                                    <td>Hải phòng</td>
+                                    <td>271 Lê Thánh Tông, phường Máy Chai, quận Ngô Quyền, TP Hải Phòng.</td>
+                                    <td>0905015900</td>
                                     <td>
                                         <FontAwesomeIcon className={cx('tbl__arr--dows', 'p-r')} icon={faTrashCan} />
-                                        <Link to="updatenotifications">
-                                            <FontAwesomeIcon className={cx('tbl__arr--ups', 'p-l')} icon={faPenToSquare} />
-                                        </Link>
-
+                                        <FontAwesomeIcon className={cx('tbl__arr--ups', 'p-l')} icon={faPenToSquare} />
                                     </td>
 
                                 </tr>
@@ -95,4 +95,4 @@ function ListNotifications()
 }
 
 
-export default ListNotifications;
+export default ListAddress;

@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-function PointManagement()
+function ManageAddress()
 {
     return (
         <div>
@@ -8,4 +8,4 @@ function PointManagement()
     );
 }
 
-export default PointManagement;
+export default ManageAddress;
