@@ -6,10 +6,9 @@ import SidebarAdmin from '~/admin/components/SidebarAdmin';
 import HeaderAdmin from '~/admin/components/HeaderAdmin';
 const cx = classNames.bind(styles);
 
-function DefaultLayoutAdmin()
-{
+function DefaultLayoutAdmin() {
     return (
-        <div className={cx('row')}>
+        <div className={cx('wrapper')}>
             <Layout style={{ backgroundColor: '#fff', flexDirection: 'unset' }}>
                 <SidebarAdmin />
 

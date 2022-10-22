@@ -33,7 +33,7 @@ const MenuAdmins = [
                 path: 'updatepoint',
                 icon: <DesktopOutlined />,
             },
-        ]
+        ],
     },
     {
         key: '2',
@@ -67,7 +67,6 @@ const MenuAdmins = [
         path: 'manageCategoryNotifications',
         icon: <DesktopOutlined />,
         children: [
-
             {
                 key: '80',
                 label: 'Thêm loại Thông báo',
@@ -86,8 +85,7 @@ const MenuAdmins = [
                 path: 'updatecatenotifications',
                 icon: <DesktopOutlined />,
             },
-
-        ]
+        ],
     },
     {
         key: '3',
@@ -113,14 +111,14 @@ const MenuAdmins = [
                 path: 'updatecontact',
                 icon: <DesktopOutlined />,
             },
-        ]
+        ],
     },
     {
         key: '4',
         label: 'Quản lý môn học',
         path: 'subjectmanagement',
         icon: <DesktopOutlined />,
-        children:[
+        children: [
             {
                 key: '40',
                 label: 'Thêm môn học',
@@ -138,9 +136,8 @@ const MenuAdmins = [
                 label: 'Cập nhật môn học',
                 path: 'updatesubject',
                 icon: <DesktopOutlined />,
-            }
-
-        ]
+            },
+        ],
     },
     {
         key: '5',
@@ -166,35 +163,33 @@ const MenuAdmins = [
                 path: 'updateaccount',
                 icon: <DesktopOutlined />,
             },
-        ]
-
+        ],
     },
     {
         key: '6',
         label: 'Quản lý lớp',
         path: 'classmanager',
         icon: <DesktopOutlined />,
-        children:[
+        children: [
             {
                 key: '61',
                 label: 'Thêm lớp ',
                 path: 'addclass',
                 icon: <DesktopOutlined />,
-            }
-            ,{
+            },
+            {
                 key: '62',
                 label: 'Danh sách lớp ',
                 path: 'listclass',
                 icon: <DesktopOutlined />,
-            }
-            ,{
+            },
+            {
                 key: '63',
                 label: 'Cập nhật  lớp ',
                 path: 'updateclass',
                 icon: <DesktopOutlined />,
-            }
-
-        ]
+            },
+        ],
     },
     {
         key: '7',
@@ -220,7 +215,7 @@ const MenuAdmins = [
                 path: 'updatesemester',
                 icon: <DesktopOutlined />,
             },
-        ]
+        ],
     },
     {
         key: '9',
@@ -246,8 +241,7 @@ const MenuAdmins = [
                 path: 'updatecourse',
                 icon: <DesktopOutlined />,
             },
-        ]
-
+        ],
     },
     {
         key: '10',
@@ -273,7 +267,7 @@ const MenuAdmins = [
                 path: 'updatemajor',
                 icon: <DesktopOutlined />,
             },
-        ]
+        ],
     },
     {
         key: '11',
@@ -299,7 +293,7 @@ const MenuAdmins = [
                 path: 'updateaddress',
                 icon: <DesktopOutlined />,
             },
-        ]
+        ],
     },
 ];
 // const dataNEw = MenuAdmins.map((item, index) => {
@@ -309,23 +303,17 @@ const MenuAdmins = [
 //     };
 // });
 // console.log(dataNEw);
-const SidebarAdmin = () =>
-{
+const SidebarAdmin = () => {
     const [collapsed, setCollapsed] = useState(false);
     const navigate = useNavigate();
-    const onClickMenu = (item) =>
-    {
+    const onClickMenu = (item) => {
         var itemClick = {};
-        const clicked = MenuAdmins.find((_item) =>
-        {
-            if (_item.key === item.key)
-            {
+        const clicked = MenuAdmins.find((_item) => {
+            if (_item.key === item.key) {
                 itemClick = _item;
             }
-            _item.children?.find((itemChild) =>
-            {
-                if (itemChild.key === item.key)
-                {
+            _item.children?.find((itemChild) => {
+                if (itemChild.key === item.key) {
                     const path = _item.path + '/' + itemChild.path;
                     console.log('tam', path);
                     itemClick = {
@@ -340,7 +328,9 @@ const SidebarAdmin = () =>
 
     return (
         <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-            <div className="logo" />
+            <div className="logo" style={{ padding: 10, display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
+                <img src="https://ap.poly.edu.vn/images/logo.png" style={{ maxHeight: 70 }} />
+            </div>
             <Menu theme="dark" items={MenuAdmins} mode="inline" onClick={onClickMenu}>
                 {MenuAdmins.map((item) => (
                     <Menu.Item key={item.key}>{item.label}</Menu.Item>

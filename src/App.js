@@ -31,9 +31,6 @@ import ListContact from './admin/pages/ContactInformation/ListContact';
 import UpdateContact from './admin/pages/ContactInformation/UpdateContact';
 // end contact
 
-<<<<<<< HEAD
-// start subject
-=======
 //start address
 import ManageAddress from './admin/pages/ManageAddress';
 import AddAddress from './admin/pages/ManageAddress/AddAddress';
@@ -41,7 +38,6 @@ import ListAddress from './admin/pages/ManageAddress/ListAddress';
 import UpdateAddress from './admin/pages/ManageAddress/UpdateAddress';
 //end address
 
->>>>>>> 784885bf6880f92dbfe34fa1c5c231c51a4b433f
 import SubjectManagement from './admin/pages/SubjectManagement';
 import AddSubjet from './admin/pages/SubjectManagement/AddSubject';
 import UpdateSubject from './admin/pages/SubjectManagement/UpdateSubject';
@@ -93,9 +89,7 @@ import ListMajor from './admin/pages/ManageMajor/ListMajor';
 import UpdateMajor from './admin/pages/ManageMajor/UpdateMajor';
 // end managerment Major (chuyên ngành)
 
-
-function App()
-{
+function App() {
     return (
         <Router>
             <Routes>
@@ -110,17 +104,16 @@ function App()
                     <Route path="viewscoreboard" element={<ViewScoreboard />} />
                     <Route path="profilepersonal" element={<ProfilePersonal />} />
                 </Route>
+
                 <Route path="/lecturers" element={<Lecturers />}>
                     <Route path="scoreup" element={<Scoreup />} />
                     <Route path="viewscoreboard" element={<ViewScoreboard />} />
                 </Route>
 
                 <Route path="/admin" element={<DefaultLayoutAdmin />}>
-                    <Route path="pointmanagement" element={<PointManagement />} >
+                    <Route path="pointmanagement" element={<PointManagement />}>
                         <Route path="listpoint" element={<ListPoint />} />
                         <Route path="updatepoint" element={<UpdatePoint />} />
-
-
                     </Route>
 
                     {/* start notifications */}
@@ -128,29 +121,21 @@ function App()
                         <Route path="addnotifications" element={<AddNotifications />} />
                         <Route path="listnotifications" element={<ListNotifications />} />
                         <Route path="updatenotifications" element={<UpdateNotifications />} />
-
                     </Route>
                     {/* <Route path="listnotifications" element={<ListNotifications />} />
                         <Route path="updatenotifications" element={<UpdateNotifications />} /> */}
                     {/* End notifications */}
 
                     {/* -----start contact------ */}
-                    <Route path="contactinformation" element={<ContactInformation />} >
+                    <Route path="contactinformation" element={<ContactInformation />}>
                         <Route path="addcontact" element={<AddContact />} />
                         <Route path="listcontact" element={<ListContact />} />
                         <Route path="updatecontact" element={<UpdateContact />} />
                     </Route>
                     {/*---- end contact -----*/}
-<<<<<<< HEAD
-                    <Route path="subjectmanagement" element={<SubjectManagement />} >
-                        <Route path="addsubject" element={<AddSubjet />} />
-                        <Route path="updatesubject" element={<UpdateSubject />}/>
-                        <Route path="listsubject" element={<ListSubject />} />
-                    </Route>
-=======
 
                     {/* start address */}
-                    <Route path="manageaddress" element={<ManageAddress />} >
+                    <Route path="manageaddress" element={<ManageAddress />}>
                         <Route path="addaddress" element={<AddAddress />} />
                         <Route path="listaddress" element={<ListAddress />} />
                         <Route path="updateaddress" element={<UpdateAddress />} />
@@ -158,9 +143,8 @@ function App()
                     {/* end address */}
 
                     <Route path="subjectmanagement" element={<SubjectManagement />} />
->>>>>>> 784885bf6880f92dbfe34fa1c5c231c51a4b433f
                     {/* start account */}
-                    <Route path="accountmanagement" element={<AccountManagement />} >
+                    <Route path="accountmanagement" element={<AccountManagement />}>
                         <Route path="addaccount" element={<AddAccount />} />
                         <Route path="listaccount" element={<ListAccount />} />
                         <Route path="updateaccount" element={<UpdateAccount />} />
@@ -169,13 +153,12 @@ function App()
                     {/* end account */}
 
                     {/* start class */}
-                    <Route path="classmanager" element={<ClassManager />} >
-                    <Route path="addclass" element={<AddClass />} />
-                    <Route path="listclass" element={<ListClass />} />
-                    <Route path="updateclass" element={<UpdateClass />} />
-                    </Route>   
-                        {/* endclass */}
-
+                    <Route path="classmanager" element={<ClassManager />}>
+                        <Route path="addclass" element={<AddClass />} />
+                        <Route path="listclass" element={<ListClass />} />
+                        <Route path="updateclass" element={<UpdateClass />} />
+                    </Route>
+                    {/* endclass */}
 
                     <Route path="reviewmanagement" element={<ReviewManagement />} />
                     {/* start loại thông tin  */}
@@ -187,7 +170,7 @@ function App()
                     {/* end cate thông tin */}
 
                     {/* ---start Semester ---*/}
-                    <Route path="managesemeter" element={<ManagerSemester />} >
+                    <Route path="managesemeter" element={<ManagerSemester />}>
                         <Route path="addsemester" element={<AddSemester />} />
                         <Route path="listsemester" element={<ListSemester />} />
                         <Route path="updatesemester" element={<UpdateSemester />} />
@@ -195,7 +178,7 @@ function App()
                     {/* End Semester */}
 
                     {/* ---start course ---*/}
-                    <Route path="managecourse" element={<ManageCourse />} >
+                    <Route path="managecourse" element={<ManageCourse />}>
                         <Route path="addcourse" element={<AddCourse />} />
                         <Route path="listcourse" element={<ListCourse />} />
                         <Route path="updatecourse" element={<UpdateCourse />} />
@@ -203,7 +186,7 @@ function App()
                     {/* end course */}
 
                     {/* ---start Major ---*/}
-                    <Route path="managemajor" element={<ManageMajor />} >
+                    <Route path="managemajor" element={<ManageMajor />}>
                         <Route path="addmajor" element={<AddMajor />} />
                         <Route path="listmajor" element={<ListMajor />} />
                         <Route path="updatemajor" element={<UpdateMajor />} />
@@ -211,7 +194,7 @@ function App()
                     {/* end Major */}
                 </Route>
             </Routes>
-        </Router >
+        </Router>
     );
 }
 
