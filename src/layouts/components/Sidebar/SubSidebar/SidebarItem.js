@@ -14,7 +14,7 @@ function SidebarItem({ item }) {
                 <Link to={item.to} className={cx('sidebar-title')} onClick={() => setOpen(!open)}>
                     <span className={cx('span')}>
                         {<div className={cx('icon_sidebar--item')}>{item.icon}</div>}
-                        {item.title}
+                        {<div className={cx('icon_sidebar--title')}>{item.title}</div>}
                     </span>
                     <span className={cx('icon_sidebar--item')}>
                         <FontAwesomeIcon className={cx('toggle-btn')} icon={item.actions}></FontAwesomeIcon>
