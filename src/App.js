@@ -44,13 +44,26 @@ import UpdateSubject from './admin/pages/SubjectManagement/UpdateSubject';
 import ListSubject from './admin/pages/SubjectManagement/ListSubject';
 // endsubject
 
-// start account
-import AccountManagement from './admin/pages/AccountManagement';
-import ListAccount from './admin/pages/AccountManagement/ListAccount';
-import UpdateAccount from './admin/pages/AccountManagement/UpdateAccount';
-import AddAccount from './admin/pages/AccountManagement/AddAccount';
+// start student
+import StudentManagement from './admin/pages/StudentManagement';
+import ListStudent from './admin/pages/StudentManagement/ListStudent';
+import UpdateStudent from './admin/pages/StudentManagement/UpdateStudent';
+import AddStudent from './admin/pages/StudentManagement/AddStudent';
+//end student
 
-//end account
+// start admin
+import AdminManagement from './admin/pages/AdminManagement';
+import AddAdmin from './admin/pages/AdminManagement/AddAdmin';
+import ListAdmin from './admin/pages/AdminManagement/ListAdmin';
+import UpdateAdmin from './admin/pages/AdminManagement/UpdateAdmin';
+//end admin
+
+// start Lecturers
+import LecturersManagement from './admin/pages/LecturersManagement';
+import AddLecturers from './admin/pages/LecturersManagement/AddLecturers';
+import ListLecturers from './admin/pages/LecturersManagement/ListLecturers';
+import UpdateLecturers from './admin/pages/LecturersManagement/UpdateLecturers';
+//end Lecturers 
 
 // import ClassManager from './admin/pages/ClassManager';
 import ReviewManagement from './admin/pages/ReviewManagement';
@@ -89,7 +102,8 @@ import ListMajor from './admin/pages/ManageMajor/ListMajor';
 import UpdateMajor from './admin/pages/ManageMajor/UpdateMajor';
 // end managerment Major (chuyên ngành)
 
-function App() {
+function App()
+{
     return (
         <Router>
             <Routes>
@@ -142,15 +156,34 @@ function App() {
                     </Route>
                     {/* end address */}
 
-                    <Route path="subjectmanagement" element={<SubjectManagement />} />
-                    {/* start account */}
-                    <Route path="accountmanagement" element={<AccountManagement />}>
-                        <Route path="addaccount" element={<AddAccount />} />
-                        <Route path="listaccount" element={<ListAccount />} />
-                        <Route path="updateaccount" element={<UpdateAccount />} />
+                    <Route path="subjectmanagement" element={<SubjectManagement />} >
+                        <Route path='addsubject' element={<AddSubjet />} />
+                        <Route path='listsubject' element={<ListSubject />} />
+                        <Route path='updatesubject' element={<UpdateSubject />} />
                     </Route>
+                    {/* start student */}
+                    <Route path="studentmanagement" element={<StudentManagement />}>
+                        <Route path="addstudent" element={<AddStudent />} />
+                        <Route path="liststudent" element={<ListStudent />} />
+                        <Route path="updatestudent" element={<UpdateStudent />} />
+                    </Route>
+                    {/* end student */}
 
-                    {/* end account */}
+                    {/* start admin  */}
+                    <Route path="adminmanagement" element={<AdminManagement />}>
+                        <Route path="addadmin" element={<AddAdmin />} />
+                        <Route path="listadmin" element={<ListAdmin />} />
+                        <Route path="updateadmin" element={<UpdateAdmin />} />
+                    </Route>
+                    {/* end admin */}
+
+                    {/* start Lecturers  */}
+                    <Route path="lecturersmanagement" element={<LecturersManagement />}>
+                        <Route path="addlecturers" element={<AddLecturers />} />
+                        <Route path="listlecturers" element={<ListLecturers />} />
+                        <Route path="updatelecturers" element={<UpdateLecturers />} />
+                    </Route>
+                    {/* end Lecturers */}
 
                     {/* start class */}
                     <Route path="classmanager" element={<ClassManager />}>

@@ -1,18 +1,13 @@
 
 import classNames from "classnames/bind";
 import styles from "./UpdateNotifications.module.scss";
-// import { CKEditor } from '@ckeditor/ckeditor5-react';
-// import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 
 const cx = classNames.bind(styles)
 function UpdateNotifications()
 {
-    // const [ckediter, setCkediter] = useState('');
 
-    // const handleChenge = (e, editor) =>
-    // {
-    //     setCkediter(editor.getData())
-    // }
     return (
         <div className={cx('content')}>
             <h1 className={cx('center')}>Cập Nhật Thông báo</h1>
@@ -34,17 +29,35 @@ function UpdateNotifications()
 
                         <div className={cx('wrapper-item')}>
                             <label>Nội dung</label>
-
-                            <textarea ></textarea>
-                            {/* <CKEditor
-                                editor={ClassicEditor}
-                                onChange={(e, editor) => { handleChenge(e, editor) }}
-                            /> */}
-
+                            <div className={cx('ckeditor')}>
+                                <CKEditor
+                                    styles={{ height: 1000 }}
+                                    editor={ClassicEditor}
+                                    data="<p>Mời viết thông tin</p>"
+                                    onReady={editor =>
+                                    {
+                                        // You can store the "editor" and use when it is needed.
+                                        console.log('Editor is ready to use!', editor);
+                                    }}
+                                    onChange={(event, editor) =>
+                                    {
+                                        const data = editor.getData();
+                                        console.log({ event, editor, data });
+                                    }}
+                                    onBlur={(event, editor) =>
+                                    {
+                                        console.log('Blur.', editor);
+                                    }}
+                                    onFocus={(event, editor) =>
+                                    {
+                                        console.log('Focus.', editor);
+                                    }}
+                                />
+                            </div>
                         </div>
 
                         <div className={cx('wrapper-item')}>
-                            <button >Cập nhật</button>
+                            <button className={cx('btn')}>Thêm</button>
                         </div>
                     </form>
                 </div>

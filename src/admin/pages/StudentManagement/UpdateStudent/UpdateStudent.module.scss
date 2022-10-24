@@ -1,3 +1,8 @@
+:root {
+    --border-radius-admin: 4px;
+    --border-color: 1px solid rgba(28, 43, 129, 0.75);
+    --border-focus: #007bff;
+}
 .content {
     width: 100%;
     .center {
@@ -9,7 +14,7 @@
 }
 
 .form-group {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     padding: var(--padding-lecturers);
     padding-bottom: 2rem;
@@ -46,7 +51,7 @@
             }
         }
 
-        .btn {
+        button {
             color: var(--color-admin);
             background-color: var(--primary-admin);
             padding: 16px 8px;
@@ -57,11 +62,17 @@
                 opacity: 0.9;
             }
         }
-    }
 
-    .ckeditor {
-        label {
-            display: none;
+        textarea {
+            width: 100%;
+            min-height: 8rem;
+            border: var(--border-color);
+            outline: none;
+            font-size: 1.5rem;
+            border-radius: var(--border-radius-admin);
+            &:focus-within {
+                border-color: var(--border-focus);
+            }
         }
     }
 }

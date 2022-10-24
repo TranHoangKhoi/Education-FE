@@ -14,7 +14,7 @@
 }
 
 .form-group {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     padding: var(--padding-lecturers);
     padding-bottom: 2rem;
@@ -51,7 +51,7 @@
             }
         }
 
-        button {
+        .btn {
             color: var(--color-admin);
             background-color: var(--primary-admin);
             padding: 16px 8px;
@@ -62,17 +62,11 @@
                 opacity: 0.9;
             }
         }
+    }
 
-        textarea {
-            width: 100%;
-            min-height: 8rem;
-            border: var(--border-color);
-            outline: none;
-            font-size: 1.5rem;
-            border-radius: var(--border-radius-admin);
-            &:focus-within {
-                border-color: var(--border-focus);
-            }
+    .ckeditor {
+        label {
+            display: none;
         }
     }
 }

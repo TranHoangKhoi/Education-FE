@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDownZA, faArrowUpZA, faMagnifyingGlass, faTrashCan, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import { Link, Route } from "react-router-dom";
 const cx = classNames.bind(styles)
-function ListSubject() {
-    return ( 
+function ListSubject()
+{
+    return (
         <div className={cx('content')}>
             <h1 className={cx('center')}>Danh sách môn học</h1>
             <div className={cx('wrapper')}>
@@ -26,7 +27,7 @@ function ListSubject() {
                                     </th>
                                     <th>
                                         <span className={cx('tbl__heading--item')}>
-                                            Môn học
+                                            Học kỳ
                                             <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
                                             <FontAwesomeIcon
                                                 className={cx('tbl__arr--down')}
@@ -34,9 +35,32 @@ function ListSubject() {
                                             />
                                         </span>
                                     </th>
+
                                     <th>
                                         <span className={cx('tbl__heading--item')}>
-                                            Chuyên nghành
+                                            Lớp học
+                                            <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
+                                            <FontAwesomeIcon
+                                                className={cx('tbl__arr--down')}
+                                                icon={faArrowDownZA}
+                                            />
+                                        </span>
+                                    </th>
+
+                                    <th>
+                                        <span className={cx('tbl__heading--item')}>
+                                            Khối nghành
+                                            <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
+                                            <FontAwesomeIcon
+                                                className={cx('tbl__arr--down')}
+                                                icon={faArrowDownZA}
+                                            />
+                                        </span>
+                                    </th>
+
+                                    <th>
+                                        <span className={cx('tbl__heading--item')}>
+                                            Môn học
                                             <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
                                             <FontAwesomeIcon
                                                 className={cx('tbl__arr--down')}
@@ -58,6 +82,8 @@ function ListSubject() {
                             <tbody>
                                 <tr>
                                     <td className={cx('text-center')}>1</td>
+                                    <td>Fall 2022</td>
+                                    <td>16301</td>
                                     <td>Lập trình c cơ bản</td>
                                     <td>Công nghệ thông tin</td>
                                     <td>
@@ -71,6 +97,8 @@ function ListSubject() {
                                 </tr>
                                 <tr>
                                     <td className={cx('text-center')}>2</td>
+                                    <td>Fall 2022</td>
+                                    <td>16301</td>
                                     <td>PTS AI</td>
                                     <td>Đồ họa</td>
                                     <td>
@@ -88,7 +116,7 @@ function ListSubject() {
                 </div>
             </div>
         </div>
-     );
+    );
 }
 
-export default ListSubject ;
+export default ListSubject;

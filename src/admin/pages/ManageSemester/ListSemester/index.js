@@ -35,6 +35,17 @@ function ListSemester()
                                             />
                                         </span>
                                     </th>
+
+                                    <th>
+                                        <span className={cx('tbl__heading--item')}>
+                                            Tên Khóa học
+                                            <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
+                                            <FontAwesomeIcon
+                                                className={cx('tbl__arr--down')}
+                                                icon={faArrowDownZA}
+                                            />
+                                        </span>
+                                    </th>
                                     <th>
                                         <span className={cx('tbl__heading--item')}>
                                             Thao tác
@@ -50,6 +61,7 @@ function ListSemester()
                                 <tr>
                                     <td className={cx('text-center')}>1</td>
                                     <td>Fall 2022</td>
+                                    <td>16301</td>
                                     <td>
                                         <FontAwesomeIcon className={cx('tbl__arr--dows', 'p-r')} icon={faTrashCan} />
                                         <FontAwesomeIcon className={cx('tbl__arr--ups', 'p-l')} icon={faPenToSquare} />
@@ -60,6 +72,7 @@ function ListSemester()
                                 <tr>
                                     <td className={cx('text-center')}>2</td>
                                     <td>Summer 2022</td>
+                                    <td>16301</td>
                                     <td>
                                         <FontAwesomeIcon className={cx('tbl__arr--dows', 'p-r')} icon={faTrashCan} />
                                         <FontAwesomeIcon className={cx('tbl__arr--ups', 'p-l')} icon={faPenToSquare} />
