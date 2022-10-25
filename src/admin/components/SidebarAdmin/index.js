@@ -141,26 +141,78 @@ const MenuAdmins = [
     },
     {
         key: '5',
-        label: 'Quản lý tài khoản',
-        path: 'accountmanagement',
+        label: 'Quản lý Sinh viên',
+        path: 'studentmanagement',
         icon: <DesktopOutlined />,
         children: [
             {
                 key: '50',
-                label: 'Thêm tài khoản ',
-                path: 'addaccount',
+                label: 'Thêm sinh viên ',
+                path: 'addstudent',
                 icon: <DesktopOutlined />,
             },
             {
                 key: '51',
-                label: 'Danh sách tài khoản ',
-                path: 'listaccount',
+                label: 'Danh sách sinh viên ',
+                path: 'liststudent',
                 icon: <DesktopOutlined />,
             },
             {
                 key: '52',
-                label: 'Sửa tài khoản',
-                path: 'updateaccount',
+                label: 'Sửa sinh viên',
+                path: 'updatestudent',
+                icon: <DesktopOutlined />,
+            },
+        ],
+    },
+    {
+        key: '12',
+        label: 'Quản lý giảng viên',
+        path: 'Lecturersmanagement',
+        icon: <DesktopOutlined />,
+        children: [
+            {
+                key: '120',
+                label: 'Thêm giảng viên ',
+                path: 'addLecturers',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '121',
+                label: 'Danh sách giảng viên ',
+                path: 'listLecturers',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '122',
+                label: 'Sửa giảng viên',
+                path: 'updateLecturers',
+                icon: <DesktopOutlined />,
+            },
+        ],
+    },
+    {
+        key: '13',
+        label: 'Quản lý admin   ',
+        path: 'adminmanagement',
+        icon: <DesktopOutlined />,
+        children: [
+            {
+                key: '130',
+                label: 'Thêm admin ',
+                path: 'addadmin',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '131',
+                label: 'Danh sách admin ',
+                path: 'listadmin',
+                icon: <DesktopOutlined />,
+            },
+            {
+                key: '132',
+                label: 'Sửa admin',
+                path: 'updateadmin',
                 icon: <DesktopOutlined />,
             },
         ],
@@ -185,7 +237,7 @@ const MenuAdmins = [
             },
             {
                 key: '63',
-                label: 'Cập nhật  lớp ',
+                label: 'Cập nhật lớp ',
                 path: 'updateclass',
                 icon: <DesktopOutlined />,
             },
@@ -303,17 +355,23 @@ const MenuAdmins = [
 //     };
 // });
 // console.log(dataNEw);
-const SidebarAdmin = () => {
+const SidebarAdmin = () =>
+{
     const [collapsed, setCollapsed] = useState(false);
     const navigate = useNavigate();
-    const onClickMenu = (item) => {
+    const onClickMenu = (item) =>
+    {
         var itemClick = {};
-        const clicked = MenuAdmins.find((_item) => {
-            if (_item.key === item.key) {
+        const clicked = MenuAdmins.find((_item) =>
+        {
+            if (_item.key === item.key)
+            {
                 itemClick = _item;
             }
-            _item.children?.find((itemChild) => {
-                if (itemChild.key === item.key) {
+            _item.children?.find((itemChild) =>
+            {
+                if (itemChild.key === item.key)
+                {
                     const path = _item.path + '/' + itemChild.path;
                     console.log('tam', path);
                     itemClick = {

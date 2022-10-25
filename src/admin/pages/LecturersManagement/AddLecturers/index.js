@@ -1,15 +1,21 @@
 import classNames from "classnames/bind";
-import styles from './AddAccount.module.scss';
+import styles from './AddLecturers.module.scss';
 
 const cx = classNames.bind(styles);
-function AddAccount()
+function AddLecturers()
 {
     return (
         <div className={cx('content')}>
-            <h1 className={cx('center')}>Thêm Tài khoản </h1>
+            <h1 className={cx('center')}>Thêm giảng viên </h1>
             <div className={cx('wrapper')}>
                 <div className={cx('row', 'no-gutters')}>
                     <form className={cx('form-group')}>
+
+                        <div className={cx('wrapper-item')}>
+                            <label>Họ và tên</label>
+                            <input placeholder="VD: Dương Thành Đạt" value="" />
+                        </div>
+
                         <div className={cx('wrapper-item')}>
                             <label>Tên đăng nhập</label>
                             <input placeholder="VD: datdtpc02104" value="" />
@@ -20,10 +26,6 @@ function AddAccount()
                             <input placeholder="VD: datdtpc02104@fpt.edu.vn" spellcheck="false" />
                         </div>
 
-                        <div className={cx('wrapper-item')}>
-                            <label>Mật khẩu</label>
-                            <input placeholder="VD: 123456789" spellcheck="false" />
-                        </div>
 
                         <div className={cx('wrapper-item')}>
                             <label>Số điện thoại</label>
@@ -31,10 +33,10 @@ function AddAccount()
                         </div>
 
                         <div className={cx('wrapper-item')}>
-                            <label>Hình ảnh</label>
-                            <input type="file" spellcheck="false" />
+                            <label>Mật khẩu</label>
+                            <input placeholder="VD: 123456789" spellcheck="false" />
                         </div>
-                        <br />
+
                         <div className={cx('wrapper-item')}>
                             <button >Thêm</button>
                         </div>
@@ -48,4 +50,4 @@ function AddAccount()
 
 }
 
-export default AddAccount;
+export default AddLecturers;

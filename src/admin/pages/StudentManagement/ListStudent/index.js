@@ -1,18 +1,15 @@
 import classNames from "classnames/bind";
-import Styles from './ListAccount.module.scss';
+import Styles from './ListStudent.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpZA, faArrowDownZA, faMagnifyingGlass, faTrashCan, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 const cx = classNames.bind(Styles);
 
-function ListAccount()
+function ListStudent()
 {
     return (
         <div className={cx('content')}>
-            <h1 className={cx('center')}>Danh sách tài khoản</h1>
+            <h1 className={cx('center')}>Danh sách sinh viên</h1>
             <div className={cx('wrapper')}>
-
-
-
                 <div className={cx('lecturers-semester', 'flex-end')}>
                     <form className={cx('form-groups', 'rows', 'c-6')}>
                         <div className={cx('search-student')}>
@@ -56,7 +53,7 @@ function ListAccount()
                                         </th>
                                         <th>
                                             <span className={cx('tbl__heading--item')}>
-                                                Họ và tên
+                                                Kháo học
                                                 <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
                                                 <FontAwesomeIcon
                                                     className={cx('tbl__arr--down')}
@@ -66,7 +63,7 @@ function ListAccount()
                                         </th>
                                         <th>
                                             <span className={cx('tbl__heading--item')}>
-                                                Email
+                                                Chuyên ngành
                                                 <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
                                                 <FontAwesomeIcon
                                                     className={cx('tbl__arr--down')}
@@ -76,7 +73,7 @@ function ListAccount()
                                         </th>
                                         <th>
                                             <span className={cx('tbl__heading--item')}>
-                                                Hình
+                                                Lớp học
                                                 <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
                                                 <FontAwesomeIcon
                                                     className={cx('tbl__arr--down')}
@@ -96,7 +93,18 @@ function ListAccount()
                                         </th>
                                         <th>
                                             <span className={cx('tbl__heading--item')}>
-                                                Vai Trò
+                                                Họ và tên
+                                                <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
+                                                <FontAwesomeIcon
+                                                    className={cx('tbl__arr--down')}
+                                                    icon={faArrowDownZA}
+                                                />
+                                            </span>
+                                        </th>
+
+                                        <th>
+                                            <span className={cx('tbl__heading--item')}>
+                                                Số điện thoại
                                                 <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
                                                 <FontAwesomeIcon
                                                     className={cx('tbl__arr--down')}
@@ -120,16 +128,13 @@ function ListAccount()
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Dương Thành Đạt</td>
-                                        <td>datdtpc02104@fpt.edu.vn</td>
-                                        <td><img className={cx('avatar-accoutn')} src="https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-1/307753152_1469903023527503_1742998525492830167_n.jpg?stp=cp6_dst-jpg_p200x200&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_ohc=YmiW7FfvZr8AX9AFKXf&tn=B0tRG6-lPEjFUyVX&_nc_ht=scontent.fsgn5-12.fna&oh=00_AT8IJtweKtSauEZTxFzsDOQxtaB9sP-xCispUYgB-skqVw&oe=6350B230" alt="" /></td>
+                                        <td>16301</td>
+                                        <td>Thiết kế web</td>
+                                        <td>WE16301</td>
                                         <td>PC02104</td>
+                                        <td>Thành đạt</td>
                                         <td>
-                                            <select>
-                                                <option value="">Admin</option>
-                                                <option value="">Giảng viên</option>
-                                                <option value="">Sinh viên</option>
-                                            </select>
+                                            0703608891
                                         </td>
                                         <td><FontAwesomeIcon className={cx('tbl__arr--up', 'p-r')} icon={faTrashCan} />
                                             <FontAwesomeIcon className={cx('tbl__arr--up', 'p-l')} icon={faPenToSquare} />
@@ -166,4 +171,4 @@ function ListAccount()
     );
 }
 
-export default ListAccount;
+export default ListStudent;

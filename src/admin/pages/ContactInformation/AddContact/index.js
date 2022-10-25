@@ -14,21 +14,17 @@ function AddContact()
                     <form className={cx('form-group')}>
                         <div className={cx('wrapper-item')}>
                             <label>Tiêu đề</label>
-                            <select>
-                                <option value="">Lựa chọn cơ sở</option>
-                                <option value="">Cần Thơ</option>
-                                <option value="">Hồ Chí Minh</option>
-                            </select>
+                            <input placeholder="VD: datdtpc02104" spellcheck="false" />
                         </div>
 
                         <div className={cx('wrapper-item')}>
                             <label>Địa chỉ</label>
-                            <input placeholder="VD: Thông tin học tập" spellcheck="false" />
+                            <input placeholder="VD: 288 Nguyễn Văn Linh" spellcheck="false" />
                         </div>
 
                         <div className={cx('wrapper-item')}>
                             <label>Số điện thoại</label>
-                            <input placeholder="VD: Thông tin học tập" spellcheck="false" />
+                            <input placeholder="VD: 0703608891" spellcheck="false" />
                         </div>
 
                         <div className={cx('wrapper-item')}>

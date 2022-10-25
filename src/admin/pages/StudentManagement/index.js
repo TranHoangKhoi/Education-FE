@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom'
-function AccountManagement()
+function StudentManagement()
 {
     return (
 
@@ -9,4 +9,4 @@ function AccountManagement()
     );
 }
 
-export default AccountManagement;
+export default StudentManagement;

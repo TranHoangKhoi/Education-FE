@@ -13,10 +13,19 @@ function AddSemester()
             <div className={cx('wrapper')}>
                 <div className={cx('row', 'no-gutters')}>
                     <form className={cx('form-group')}>
+
+                        <div className={cx('wrapper-item')}>
+                            <label>Khóa học</label>
+                            <select>
+                                <option value="">16301</option>
+                            </select>
+                        </div>
+
                         <div className={cx('wrapper-item')}>
                             <label>Học Kỳ</label>
                             <input placeholder="VD: Fall 2022" spellcheck="false" />
                         </div>
+
                         <div className={cx('wrapper-item')}>
                             <button >Thêm</button></div>
                     </form>

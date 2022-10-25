@@ -1,18 +1,15 @@
 import classNames from "classnames/bind";
-import Styles from './UpdateAccount.module.scss';
+import Styles from './ListLecturers.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpZA, faArrowDownZA, faMagnifyingGlass, faTrashCan, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 const cx = classNames.bind(Styles);
 
-function UpdateAccount()
+function ListLecturers()
 {
     return (
         <div className={cx('content')}>
-            <h1 className={cx('center')}>Danh sách tài khoản</h1>
+            <h1 className={cx('center')}>Danh sách Giảng viên</h1>
             <div className={cx('wrapper')}>
-
-
-
                 <div className={cx('lecturers-semester', 'flex-end')}>
                     <form className={cx('form-groups', 'rows', 'c-6')}>
                         <div className={cx('search-student')}>
@@ -23,9 +20,6 @@ function UpdateAccount()
                         </div>
                     </form>
                 </div>
-
-
-
                 <div className={cx('lecturers__name-table')}>
                     <div className={cx('lecturers__name')}>
                         <p></p>
@@ -64,6 +58,18 @@ function UpdateAccount()
                                                 />
                                             </span>
                                         </th>
+
+                                        <th>
+                                            <span className={cx('tbl__heading--item')}>
+                                                Mã giảng viên
+                                                <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
+                                                <FontAwesomeIcon
+                                                    className={cx('tbl__arr--down')}
+                                                    icon={faArrowDownZA}
+                                                />
+                                            </span>
+                                        </th>
+
                                         <th>
                                             <span className={cx('tbl__heading--item')}>
                                                 Email
@@ -76,17 +82,7 @@ function UpdateAccount()
                                         </th>
                                         <th>
                                             <span className={cx('tbl__heading--item')}>
-                                                Hình
-                                                <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
-                                                <FontAwesomeIcon
-                                                    className={cx('tbl__arr--down')}
-                                                    icon={faArrowDownZA}
-                                                />
-                                            </span>
-                                        </th>
-                                        <th>
-                                            <span className={cx('tbl__heading--item')}>
-                                                MSSV
+                                                Số điện thoại
                                                 <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
                                                 <FontAwesomeIcon
                                                     className={cx('tbl__arr--down')}
@@ -121,15 +117,11 @@ function UpdateAccount()
                                     <tr>
                                         <td>1</td>
                                         <td>Dương Thành Đạt</td>
-                                        <td>datdtpc02104@fpt.edu.vn</td>
-                                        <td><img className={cx('avatar-accoutn')} src="https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-1/307753152_1469903023527503_1742998525492830167_n.jpg?stp=cp6_dst-jpg_p200x200&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_ohc=YmiW7FfvZr8AX9AFKXf&tn=B0tRG6-lPEjFUyVX&_nc_ht=scontent.fsgn5-12.fna&oh=00_AT8IJtweKtSauEZTxFzsDOQxtaB9sP-xCispUYgB-skqVw&oe=6350B230" alt="" /></td>
-                                        <td>PC02104</td>
+                                        <td>GV02104</td>
+                                        <td>datdtgv02104@fpt.edu.vn</td>
+                                        <td>0905015900</td>
                                         <td>
-                                            <select>
-                                                <option value="">Admin</option>
-                                                <option value="">Giảng viên</option>
-                                                <option value="">Sinh viên</option>
-                                            </select>
+                                            Giảng viên
                                         </td>
                                         <td><FontAwesomeIcon className={cx('tbl__arr--up', 'p-r')} icon={faTrashCan} />
                                             <FontAwesomeIcon className={cx('tbl__arr--up', 'p-l')} icon={faPenToSquare} />
@@ -166,4 +158,4 @@ function UpdateAccount()
     );
 }
 
-export default UpdateAccount;
+export default ListLecturers;

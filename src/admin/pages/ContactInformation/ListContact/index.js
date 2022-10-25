@@ -23,7 +23,7 @@ function ListContact()
                                     </th>
                                     <th>
                                         <span className={cx('tbl__heading--item')}>
-                                            Tên cơ sở
+                                            Email
                                             <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
                                             <FontAwesomeIcon
                                                 className={cx('tbl__arr--down')}
@@ -64,7 +64,7 @@ function ListContact()
                             <tbody>
                                 <tr>
                                     <td className={cx('text-center')}>1</td>
-                                    <td>Cần thơ</td>
+                                    <td>datdtpc02104@fpt.edu.vn</td>
                                     <td>Số 288, Nguyễn Văn Linh, phường An Khánh, quận Ninh Kiều, Tp. Cần Thơ.</td>
                                     <td>(0292) 7300 468</td>
                                     <td>

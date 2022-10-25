@@ -18,6 +18,10 @@ function AddMajor()
                             <input placeholder="VD: Thiết kế website" spellcheck="false" />
                         </div>
                         <div className={cx('wrapper-item')}>
+                            <label>Mã chuyên ngành </label>
+                            <input placeholder="VD: WEB" spellcheck="false" />
+                        </div>
+                        <div className={cx('wrapper-item')}>
                             <button >Thêm</button></div>
                     </form>
                 </div>
