@@ -24,6 +24,22 @@ function AddSubject() {
                             </select>
                         </div>
                         <div className={cx('wrapper-item')}>
+                            <label>Học kì</label>
+                            <select>
+                                <option value="">Kì sumer </option>
+                                <option value="">Kì spring</option>
+                              
+                            </select>
+                        </div>
+                        <div className={cx('wrapper-item')}>
+                            <label>Lớp</label>
+                            <select>
+                                <option value="">16301 </option>
+                                <option value="">16302</option>
+                                <option value="">16301</option>
+                            </select>
+                        </div>
+                        <div className={cx('wrapper-item')}>
                         <button >Thêm</button></div>
                 </form>
             </div>

@@ -39,7 +39,7 @@ import UpdateAddress from './admin/pages/ManageAddress/UpdateAddress';
 //end address
 
 import SubjectManagement from './admin/pages/SubjectManagement';
-import AddSubjet from './admin/pages/SubjectManagement/AddSubject';
+import AddSubject from './admin/pages/SubjectManagement/AddSubject';
 import UpdateSubject from './admin/pages/SubjectManagement/UpdateSubject';
 import ListSubject from './admin/pages/SubjectManagement/ListSubject';
 // endsubject
@@ -142,7 +142,14 @@ function App() {
                     </Route>
                     {/* end address */}
 
-                    <Route path="subjectmanagement" element={<SubjectManagement />} />
+                        {/* {star objject} */}
+                    <Route path="subjectmanagement" element={<SubjectManagement />}>
+                        <Route path="addsubject" element={<AddSubject />} />
+                        <Route path="listsubject" element={<ListSubject />} />
+                        <Route path="updatesubject" element={<UpdateSubject/>} />
+                        </Route>
+                        {/* endobject  */}
+
                     {/* start account */}
                     <Route path="accountmanagement" element={<AccountManagement />}>
                         <Route path="addaccount" element={<AddAccount />} />

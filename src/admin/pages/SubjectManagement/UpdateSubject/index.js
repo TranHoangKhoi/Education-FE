@@ -20,6 +20,22 @@ function  UpdateSubject() {
                                 <option value="">Cơ khí</option>
                             </select>
                         </div>
+                        <div className={cx('wrapper-item')}>
+                            <label>Học kì</label>
+                            <select>
+                                <option value="">Spring </option>
+                                <option value="">Summer</option>
+                                <option value=""> .</option>
+                            </select>
+                        </div>
+                        <div className={cx('wrapper-item')}>
+                            <label>Lớp</label>
+                            <select>
+                                <option value="">16301</option>
+                                <option value="">16302</option>
+                                <option value="">. </option>
+                            </select>
+                        </div>
                     <div className={cx('wrapper-item')}>
                         <button >Cập nhật</button>
                     </div>

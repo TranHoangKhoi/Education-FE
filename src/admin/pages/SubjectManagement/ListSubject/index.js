@@ -36,7 +36,27 @@ function ListSubject() {
                                     </th>
                                     <th>
                                         <span className={cx('tbl__heading--item')}>
-                                            Chuyên nghành
+                                           Chuyên ngành
+                                            <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
+                                            <FontAwesomeIcon
+                                                className={cx('tbl__arr--down')}
+                                                icon={faArrowDownZA}
+                                            />
+                                        </span>
+                                    </th>
+                                    <th>
+                                        <span className={cx('tbl__heading--item')}>
+                                           Học kì
+                                            <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
+                                            <FontAwesomeIcon
+                                                className={cx('tbl__arr--down')}
+                                                icon={faArrowDownZA}
+                                            />
+                                        </span>
+                                    </th>
+                                    <th>
+                                        <span className={cx('tbl__heading--item')}>
+                                           Lớp
                                             <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
                                             <FontAwesomeIcon
                                                 className={cx('tbl__arr--down')}
@@ -51,7 +71,7 @@ function ListSubject() {
                                         </span>
 
                                     </th>
-
+                                  
                                 </tr>
                             </thead>
 
@@ -60,6 +80,9 @@ function ListSubject() {
                                     <td className={cx('text-center')}>1</td>
                                     <td>Lập trình c cơ bản</td>
                                     <td>Công nghệ thông tin</td>
+                                    <td>Summer</td>
+                                    <td> 16301</td>
+                                    
                                     <td>
                                         <FontAwesomeIcon className={cx('tbl__arr--dows', 'p-r')} icon={faTrashCan} />
 
@@ -73,6 +96,8 @@ function ListSubject() {
                                     <td className={cx('text-center')}>2</td>
                                     <td>PTS AI</td>
                                     <td>Đồ họa</td>
+                                    <td>Spring</td>
+                                    <td> 16302</td>
                                     <td>
                                         <FontAwesomeIcon className={cx('tbl__arr--dows', 'p-r')} icon={faTrashCan} />
                                         <Link to="updatenotifications">

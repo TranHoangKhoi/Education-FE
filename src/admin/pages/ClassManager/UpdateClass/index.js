@@ -17,6 +17,22 @@ function UpdateClass() {
                     <input placeholder="VD: WD16301" spellcheck="false" />
                 </div>
                 <div className={cx('wrapper-item')}>
+                            <label>Các môn chuyên ngành</label>
+                            <select>
+                                <option value="">Công nghệ thông tin </option>
+                                <option value="">Quản trị nhà hàng khách sạn</option>
+                                <option value="">Cơ khí</option>
+                            </select>
+                        </div>
+                <div className={cx('wrapper-item')}>
+                   <label>Học kì</label>
+                   <select>
+                       <option value="">Sumer </option>
+                       <option value="">Sping</option>
+                    
+                   </select>
+                        </div>
+                <div className={cx('wrapper-item')}>
                     <button >Thêm</button></div>
             </form>
         </div>

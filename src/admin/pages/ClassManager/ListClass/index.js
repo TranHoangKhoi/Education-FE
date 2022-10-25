@@ -39,6 +39,26 @@ function ListClass()
                                     </th>
                                     <th>
                                         <span className={cx('tbl__heading--item')}>
+                                            Chuyên ngành
+                                            <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
+                                            <FontAwesomeIcon
+                                                className={cx('tbl__arr--down')}
+                                                icon={faArrowDownZA}
+                                            />
+                                        </span>
+                                    </th>
+                                    <th>
+                                        <span className={cx('tbl__heading--item')}>
+                                            Học kì
+                                            <FontAwesomeIcon className={cx('tbl__arr--up')} icon={faArrowUpZA} />
+                                            <FontAwesomeIcon
+                                                className={cx('tbl__arr--down')}
+                                                icon={faArrowDownZA}
+                                            />
+                                        </span>
+                                    </th>
+                                    <th>
+                                        <span className={cx('tbl__heading--item')}>
                                             Thao tác
 
                                         </span>
@@ -52,6 +72,9 @@ function ListClass()
                                 <tr>
                                     <td className={cx('text-center')}>1</td>
                                     <td>16301</td>
+                                    <td>Công nghệ thông tin</td>
+                                    <td>Sping</td>
+
                                     <td>
                                         <FontAwesomeIcon className={cx('tbl__arr--dows', 'p-r')} icon={faTrashCan} />
                                         <FontAwesomeIcon className={cx('tbl__arr--ups', 'p-l')} icon={faPenToSquare} />
@@ -62,6 +85,8 @@ function ListClass()
                                 <tr>
                                     <td className={cx('text-center')}>2</td>
                                     <td>17304</td>
+                                    <td>Công nghệ thông tin</td>
+                                    <td>Sping</td>
                                     <td>
                                         <FontAwesomeIcon className={cx('tbl__arr--dows', 'p-r')} icon={faTrashCan} />
                                         <FontAwesomeIcon className={cx('tbl__arr--ups', 'p-l')} icon={faPenToSquare} />
