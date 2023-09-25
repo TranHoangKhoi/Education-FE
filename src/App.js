@@ -102,6 +102,9 @@ import ListMajor from './admin/pages/ManageMajor/ListMajor';
 import UpdateMajor from './admin/pages/ManageMajor/UpdateMajor';
 // end managerment Major (chuyên ngành)
 
+//start acount 
+
+
 function App()
 {
     return (
@@ -156,27 +159,20 @@ function App()
                     </Route>
                     {/* end address */}
 
-<<<<<<< HEAD
                         {/* {star objject} */}
                     <Route path="subjectmanagement" element={<SubjectManagement />}>
                         <Route path="addsubject" element={<AddSubject />} />
                         <Route path="listsubject" element={<ListSubject />} />
                         <Route path="updatesubject" element={<UpdateSubject/>} />
-                        </Route>
+                     </Route>
                         {/* endobject  */}
 
                     {/* start account */}
-                    <Route path="accountmanagement" element={<AccountManagement />}>
+                    {/* <Route path="accountmanagement" element={<AccountManagement />}>
                         <Route path="addaccount" element={<AddAccount />} />
                         <Route path="listaccount" element={<ListAccount />} />
-                        <Route path="updateaccount" element={<UpdateAccount />} />
-=======
-                    <Route path="subjectmanagement" element={<SubjectManagement />} >
-                        <Route path='addsubject' element={<AddSubjet />} />
-                        <Route path='listsubject' element={<ListSubject />} />
-                        <Route path='updatesubject' element={<UpdateSubject />} />
->>>>>>> 39c7799aa0c86d59bb405f8d4ee131634f38d4cd
-                    </Route>
+                        <Route path="updateaccount" element={<UpdateAccount />} />ss
+                    </Route> */}
                     {/* start student */}
                     <Route path="studentmanagement" element={<StudentManagement />}>
                         <Route path="addstudent" element={<AddStudent />} />
